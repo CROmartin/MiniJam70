@@ -1,6 +1,7 @@
 [gd_resource type="SpatialMaterial" load_steps=2 format=2]
 
-[ext_resource path="res://TreeTest2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/TreeTest2.png" type="Texture" id=1]
+
 
 [resource]
 params_depth_draw_mode = 3
