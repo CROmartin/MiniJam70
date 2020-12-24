@@ -1,6 +1,7 @@
 git clone branch name - we have done already that
 git checkout branch name - this will chenge your current branch
 git status - it will give you status of files that are ready for commiting and witch are not
+git commit -m "Description"
 git add file name- file which you want add to commiting queue, to add every file at once write "git add ."
 git push - it will push commited file to GitHub repository 
 git pull - it will pull changes made on GitHub repository 
