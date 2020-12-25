@@ -1,7 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Materials/Meshes/Tree_1B.mesh" type="ArrayMesh" id=1]
-[ext_resource path="res://Assets/Materials/Tree_B.tres" type="Material" id=2]
+[ext_resource path="res://Assets/Old/Meshes/Tree_1B.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Assets/Old/Tree_B.tres" type="Material" id=2]
+
+
+
+
 
 
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/PlayArea_Collision.obj-d2b79c5137ada9263effbfc960ff4934.mesh"
+
+[deps]
+
+files=[ "res://.import/PlayArea_Collision.obj-d2b79c5137ada9263effbfc960ff4934.mesh" ]
+
+source_file="res://Assets/Meshes/PlayArea_Collision.obj"
+dest_files=[ "res://.import/PlayArea_Collision.obj-d2b79c5137ada9263effbfc960ff4934.mesh", "res://.import/PlayArea_Collision.obj-d2b79c5137ada9263effbfc960ff4934.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
