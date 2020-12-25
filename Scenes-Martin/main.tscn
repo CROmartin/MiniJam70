@@ -5,7 +5,7 @@
 
 [node name="main" type="Spatial"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 19.2529, 3.25053, 0.70113 )
-
 [node name="Blockout" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 18.7085, 0, 0 )

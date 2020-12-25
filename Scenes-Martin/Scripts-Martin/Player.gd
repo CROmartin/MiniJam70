@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var move_speed = 8;
+var move_speed = 1;
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -19,16 +19,20 @@ func _ready():
 func _physics_process(delta):
 	var posToMove = Vector3(0,0,0);
 	if Input.is_action_pressed("up"):
-		posToMove.z = -1;
+		posToMove.z = 1; # -1
+		posToMove.x = -1;
 		move_and_collide(posToMove * move_speed * delta);
 	if Input.is_action_pressed("down"):
-		posToMove.z = 1;
+		posToMove.z = -1; # 1
+		posToMove.x = 1;
 		move_and_collide(posToMove * move_speed * delta);
 		
 	if Input.is_action_pressed("right"):
-		posToMove.x = 1;
+		posToMove.x = -1;
+		posToMove.z = -1;
 		move_and_collide(posToMove * move_speed * delta);
 	if Input.is_action_pressed("left"):
-		posToMove.x = -1;
+		posToMove.z = 1;
+		posToMove.x = 1;
 		move_and_collide(posToMove * move_speed * delta);
 	

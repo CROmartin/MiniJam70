@@ -49,22 +49,24 @@ albedo_texture = ExtResource( 1 )
 [sub_resource type="QuadMesh" id=7]
 material = SubResource( 6 )
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="SphereShape" id=8]
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 2 )
 
 [node name="Particles" type="Particles" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.850608, 0 )
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.969639, 0 )
 amount = 5000
 lifetime = 5.0
 process_material = SubResource( 5 )
 draw_pass_1 = SubResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.980684, 0 )
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.980684, 0 )
 shape = SubResource( 8 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.806507, 0.591225, 0, -0.591225, 0.806507, 0, 12.5122, 12.4886 )
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 4.52934, 3.61906 )
+projection = 1
 current = true
+size = 3.65069
