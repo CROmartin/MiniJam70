@@ -7,22 +7,22 @@
 [ext_resource path="res://Assets/Blockout/Hedge_L.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://Assets/Blockout/Hedge_XL.obj" type="ArrayMesh" id=6]
 
-[sub_resource type="BoxShape" id=3]
+[sub_resource type="BoxShape" id=1]
 extents = Vector3( 1.98741, 2.41259, 1 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 2.95061, 2.41259, 1 )
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=3]
 extents = Vector3( 3.95372, 2.41259, 1 )
 
-[sub_resource type="BoxShape" id=2]
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 5.96267, 2.41259, 1 )
+
+[sub_resource type="BoxShape" id=5]
 extents = Vector3( 5.96267, 2.41259, 1 )
 
 [sub_resource type="BoxShape" id=6]
-extents = Vector3( 5.96267, 2.41259, 1 )
-
-[sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.957092, 0.782861, 0.998001 )
 
 [sub_resource type="BoxShape" id=7]
@@ -81,7 +81,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody17" type="StaticBody" parent="Hedge_S"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S/StaticBody17"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S3" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -13.0364, 0, 11.6692 )
@@ -91,7 +91,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody16" type="StaticBody" parent="Hedge_S3"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S3/StaticBody16"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S8" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -12.1175, 0, 5.50834 )
@@ -101,7 +101,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody15" type="StaticBody" parent="Hedge_S8"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S8/StaticBody15"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S4" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0364, 0, -4.71936 )
@@ -111,7 +111,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody14" type="StaticBody" parent="Hedge_S4"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S4/StaticBody14"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S5" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0076, 0, 4.4553 )
@@ -121,7 +121,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody13" type="StaticBody" parent="Hedge_S5"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S5/StaticBody13"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S2" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 13.7575, 0, -8.90499 )
@@ -131,7 +131,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody12" type="StaticBody" parent="Hedge_S2"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S2/StaticBody12"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S6" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.774 )
@@ -141,7 +141,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody11" type="StaticBody" parent="Hedge_S6"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S6/StaticBody11"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S9" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4198, -1.90735e-06, -5.81053 )
@@ -151,7 +151,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody10" type="StaticBody" parent="Hedge_S9"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S9/StaticBody10"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_S7" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.9808 )
@@ -161,7 +161,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody9" type="StaticBody" parent="Hedge_S7"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_S7/StaticBody9"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Hedge_M" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9879, 9.53674e-07, -6.83891 )
@@ -171,7 +171,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody8" type="StaticBody" parent="Hedge_M"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_M/StaticBody8"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="Hedge_M4" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2953, 9.53674e-07, -0.636298 )
@@ -181,7 +181,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody7" type="StaticBody" parent="Hedge_M4"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_M4/StaticBody7"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="Hedge_M2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7058, 1.90735e-06, -5.77302 )
@@ -191,7 +191,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody6" type="StaticBody" parent="Hedge_M2"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_M2/StaticBody6"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="Hedge_M3" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -6.94028, 0, -10.9114 )
@@ -201,7 +201,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody5" type="StaticBody" parent="Hedge_M3"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_M3/StaticBody5"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="Hedge_M5" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 9.71949, 0, -1.6404 )
@@ -211,7 +211,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody4" type="StaticBody" parent="Hedge_M5"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_M5/StaticBody4"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="Hedge_L" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8948, 9.53674e-07, 8.54749 )
@@ -221,7 +221,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody3" type="StaticBody" parent="Hedge_L"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_L/StaticBody3"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Hedge_XL" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0427, 9.53674e-07, 8.64354 )
@@ -231,7 +231,7 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody2" type="StaticBody" parent="Hedge_XL"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_XL/StaticBody2"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Hedge_XL2" type="MeshInstance" parent="."]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -16.1669, -9.53674e-07, -7.90324 )
@@ -241,13 +241,13 @@ material/0 = ExtResource( 3 )
 [node name="StaticBody" type="StaticBody" parent="Hedge_XL2"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Hedge_XL2/StaticBody"]
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="FloorStaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="FloorStaticBody"]
 transform = Transform( 28.759, 0, 0, 0, 1, 0, 0, 0, 15.006, 0, -0.685834, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="Walls" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7368, 0, -14.0775 )
