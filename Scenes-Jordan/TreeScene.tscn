@@ -4,7 +4,8 @@
 [ext_resource path="res://Scenes-Jordan/Tree_1B.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes-Jordan/Tree_2B.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes-Jordan/Tree_1A.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/TestPattern_01.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Old/TestPattern_01.png" type="Texture" id=5]
+
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
