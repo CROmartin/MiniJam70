@@ -55,6 +55,7 @@ far = 50.0
 transform = Transform( -1.62921e-07, -0.34202, 0.939693, 0, 0.939693, 0.34202, -1, 5.57222e-08, -1.53095e-07, 0, 0, 0 )
 light_color = Color( 0.85098, 0.984314, 0.717647, 1 )
 light_energy = 1.33
+shadow_enabled = true
 
 [node name="Plane" type="MeshInstance" parent="."]
 transform = Transform( 40, 0, 0, 0, 1, 0, 0, 0, 40, -15, 0, -15 )
