@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Assets/Blockout/PlayFieldBlockout.res" type="ArrayMesh" id=1]
 [ext_resource path="res://Assets/Blockout/Hedge_M.obj" type="ArrayMesh" id=2]
@@ -41,6 +41,10 @@ extents = Vector3( 3.0379, 2.01487, 0.513825 )
 [sub_resource type="CylinderShape" id=11]
 radius = 6.51809
 height = 0.86283
+
+[sub_resource type="BoxShape" id=12]
+
+[sub_resource type="CubeMesh" id=13]
 
 [node name="Blockout" type="Spatial"]
 
@@ -329,3 +333,15 @@ shape = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 11 )
+
+[node name="RAMP" type="StaticBody" parent="."]
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="RAMP"]
+transform = Transform( 1, 0, 0, 0, 0.975254, -0.221089, 0, 0.221089, 0.975254, 0, -0.716107, 7.12991 )
+shape = SubResource( 12 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RAMP"]
+transform = Transform( 1, 0, 0, 0, 0.230423, 0.97309, 0, -0.97309, 0.230423, 0, -0.712166, 7.12702 )
+mesh = SubResource( 13 )
+material/0 = null
