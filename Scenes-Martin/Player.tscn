@@ -1,7 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes-Martin/triangle.png" type="Texture" id=1]
 [ext_resource path="res://Scenes-Martin/Scripts-Martin/Player.gd" type="Script" id=2]
+
+[sub_resource type="SphereShape" id=8]
+
+[sub_resource type="SphereMesh" id=11]
+
+[sub_resource type="SpatialMaterial" id=12]
+flags_unshaded = true
+albedo_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="Curve" id=1]
 _data = [ Vector2( 0.0126582, 0.190909 ), 0.0, 0.0, 0, 0, Vector2( 0.303797, 0.845455 ), 0.0, 0.0, 0, 0, Vector2( 0.772152, 0.5 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
@@ -17,10 +25,9 @@ colors = PoolColorArray( 0.596078, 0.305882, 0.00392157, 1, 0.776471, 0.290196, 
 gradient = SubResource( 3 )
 
 [sub_resource type="ParticlesMaterial" id=5]
-trail_divisor = 10
 trail_color_modifier = SubResource( 4 )
 emission_shape = 1
-emission_sphere_radius = 1.0
+emission_sphere_radius = 3.0
 direction = Vector3( 0, 1, 0 )
 spread = 5.0
 gravity = Vector3( 0, 0, 0 )
@@ -37,36 +44,63 @@ scale = 0.5
 scale_curve = SubResource( 2 )
 
 [sub_resource type="SpatialMaterial" id=6]
-flags_unshaded = true
+flags_transparent = true
 vertex_color_use_as_albedo = true
 params_blend_mode = 1
 params_billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
+albedo_color = Color( 1, 0, 0, 1 )
 albedo_texture = ExtResource( 1 )
 
 [sub_resource type="QuadMesh" id=7]
 material = SubResource( 6 )
 
-[sub_resource type="SphereShape" id=8]
+[sub_resource type="SpatialMaterial" id=9]
+flags_transparent = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 2
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 1, 0.784314, 0.784314, 1 )
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=10]
+material = SubResource( 9 )
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 2 )
-
-[node name="Particles" type="Particles" parent="."]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.969639, 0 )
-amount = 5000
-lifetime = 5.0
-process_material = SubResource( 5 )
-draw_pass_1 = SubResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.980684, 0 )
 shape = SubResource( 8 )
 
+[node name="body" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="body"]
+transform = Transform( 0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0.978024, 0 )
+mesh = SubResource( 11 )
+material/0 = SubResource( 12 )
+
+[node name="Particles" type="Particles" parent="body"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.969639, 0 )
+amount = 250
+lifetime = 5.0
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 7 )
+
+[node name="Particles2" type="Particles" parent="body"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.969639, 0 )
+amount = 250
+lifetime = 5.0
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 10 )
+
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 9, 8 )
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 4.52934, 3.61906 )
 projection = 1
 current = true
-size = 7.0
+size = 3.65069
