@@ -32,6 +32,7 @@ func _process(delta):
 	
 	if distance < 4 && $OmniLight.light_energy > 0:
 		corner_id.flicker = 1;
+		player.part_change = 1;
 		var d_l = 0.2;
 		var r_l = 4.0;
 		$OmniLight.light_energy = l1;
@@ -55,5 +56,5 @@ func _process(delta):
 		$OmniLight2.light_energy = 0;
 		$OmniLight3.light_energy = 0;
 		corner_id.flicker = 0;
-		
+		player.part_change = 0;
 	pass

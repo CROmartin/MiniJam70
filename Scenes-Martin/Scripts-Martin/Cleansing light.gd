@@ -16,11 +16,12 @@ func _ready():
 	rng.randomize();
 	corner = "main/PlayArea/" + corner;
 	corner_id = get_tree().get_root().get_node(corner)
+	player = get_tree().get_root().get_node("main/Player");
 	print(corner);
 	pass # Replace with function body.
 
 func _process(delta):
-	player = get_tree().get_root().get_node("main/Player");
+	
 	var distance = translation.distance_to(player.translation);
 	if distance > 9:
 		$OmniLight.visible = false;
@@ -33,6 +34,7 @@ func _process(delta):
 	
 	if distance < 4 && $OmniLight.light_energy > 0:
 		corner_id.flicker = 1;
+		player.part_change = 1;
 		var d_l = 0.2;
 		var r_l = 4.0;
 		$OmniLight.light_energy = l1;
@@ -56,5 +58,5 @@ func _process(delta):
 		$OmniLight2.light_energy = 0;
 		$OmniLight3.light_energy = 0;
 		corner_id.flicker = 0;
-		
-	pass
+		player.part_change = 0;
+		pass

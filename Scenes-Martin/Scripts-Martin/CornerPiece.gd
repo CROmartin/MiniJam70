@@ -17,6 +17,7 @@ var rng = RandomNumberGenerator.new()
 var t = 0;
 var t_d = 0;
 var random_target = 0.0;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	

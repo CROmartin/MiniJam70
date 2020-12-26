@@ -9,6 +9,7 @@ var tilt_speed = 0.0025;
 var second_pos;
 var tilt_pos = Vector3(0,0,0);
 var posToMove = Vector3(0,0,0);
+var part_change = 0;
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -28,7 +29,10 @@ func _ready():
 
 
 func _physics_process(delta):
-	
+	if part_change == 1:
+		$body/Particles.tangential_accel = 30;
+	else:
+		$body/Particles.tangential_accel = 5;
 	posToMove.x = 0;
 	posToMove.z = 0;
 	if Input.is_action_pressed("up"):
@@ -77,11 +81,11 @@ func tilting(delta):
 	if tilt == 1:
 		$body.translation.y += tilt_speed*tilt;
 		tilt_range -= 1;
-		$OmniLight.light_energy += 0.001;
+		$OmniLight.light_energy += 0.1;
 	else:
 		$body.translation.y += tilt_speed*tilt; 
 		tilt_range -= 1;
-		$OmniLight.light_energy -= 0.001;
+		$OmniLight.light_energy -= 0.1;
 		
 	
 	if tilt_range == 0:
