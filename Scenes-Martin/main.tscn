@@ -20,11 +20,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0 )
 script = ExtResource( 6 )
 
 [node name="Cleansing light" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 25.1267, -0.421424, 12.2919 )
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 25.294, -0.421424, 12.6751 )
 corner = "CornerPiece2"
 
 [node name="Cleansing light2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7696, -0.421424, -12.7928 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6101, -0.421424, -13.139 )
 corner = "CornerPiece"
 
 [node name="Cleansing light3" parent="." instance=ExtResource( 4 )]
@@ -32,7 +32,7 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -25.273
 corner = "CornerPiece4"
 
 [node name="Cleansing light4" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -25.4621, -0.421424, 12.8771 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -25.2757, -0.421424, 13.281 )
 corner = "CornerPiece3"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
