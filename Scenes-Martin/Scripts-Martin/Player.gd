@@ -64,7 +64,7 @@ func _physics_process(delta):
 			
 			
 	if vec.y > 0:
-		print(vec.y);
+		
 		if vec.y < 0.0001:
 			vec.y = 0;
 		
