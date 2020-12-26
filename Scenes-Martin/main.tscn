@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes-Martin/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes-Jordan/Blockout.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes-Jordan/PlayArea.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes-Martin/Cleansing light.tscn" type="PackedScene" id=4]
 
 [node name="main" type="Spatial"]
 
@@ -14,3 +15,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0 )
 
 [node name="Blockout" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.674653, 0 )
+
+[node name="Cleansing light" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6934, 1.90538, 13.3022 )

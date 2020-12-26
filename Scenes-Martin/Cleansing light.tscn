@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes-Martin/Scripts-Martin/Cleansing light.gd" type="Script" id=1]
+
+[node name="Cleansing light" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 3.0

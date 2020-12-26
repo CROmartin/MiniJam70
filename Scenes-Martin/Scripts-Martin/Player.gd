@@ -62,6 +62,12 @@ func _physics_process(delta):
 		if !translation.y+vec.y > translation.y:
 			posToMove.y = 0;
 			
+			
+	if vec.y > 0:
+		print(vec.y);
+		if vec.y < 0.0001:
+			vec.y = 0;
+		
 	if vec.y > 0 && posToMove.y == 0:
 		posToMove.y = 3;
 	elif translation.y+vec.y > translation.y:
