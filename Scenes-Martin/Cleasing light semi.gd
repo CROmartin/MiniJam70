@@ -4,9 +4,8 @@ onready var player = get_tree().get_root().get_node("Player");
 var rng = RandomNumberGenerator.new()
 export var corner = "";
 onready var corner_id = get_tree().get_root().get_node("main/PlayArea/CornerPiece2")
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+
 onready var l1 = $OmniLight.light_energy;
 onready var l2 = $OmniLight2.light_energy;
 onready var l3 = $OmniLight3.light_energy;

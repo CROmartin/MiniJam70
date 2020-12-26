@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes-Martin/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes-Jordan/Blockout.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes-Jordan/PlayArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes-Martin/Cleansing light.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes-Martin/Cleasing light semi.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Environment" id=1]
 background_mode = 2
@@ -18,11 +19,30 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0 )
 
 [node name="Blockout" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.674653, 0 )
-visible = false
 
 [node name="Cleansing light" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 25.1267, -0.421424, 12.2919 )
 corner = "CornerPiece2"
 
+[node name="Cleansing light2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.7696, -0.421424, -12.7928 )
+corner = "CornerPiece"
+
+[node name="Cleansing light3" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -25.2739, -0.421424, -12.9039 )
+corner = "CornerPiece4"
+
+[node name="Cleansing light4" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -25.4621, -0.421424, 12.8771 )
+corner = "CornerPiece3"
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
+
+[node name="Cleasing light semi" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 0, -19.9189 )
+corner = "Semicircle"
+
+[node name="Cleasing light semi2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0, 0, 19.1769 )
+corner = "Semicircle2"

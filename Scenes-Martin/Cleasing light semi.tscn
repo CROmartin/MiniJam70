@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes-Martin/Cleasing light semi.gd" type="Script" id=1]
+
+[node name="Cleasing light semi" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="OmniLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 4.84484, 0 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 30.0
+spot_range = 10.0
+
+[node name="OmniLight3" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -1.24727, 4.83569, -2.87613 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 30.0
+spot_range = 10.0
+
+[node name="OmniLight2" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -1.2738, 4.84484, 2.49866 )
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 30.0
+spot_range = 10.0

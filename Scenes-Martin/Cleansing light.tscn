@@ -9,13 +9,16 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 4.84484, 0 )
 light_color = Color( 1, 0, 0, 1 )
 light_energy = 50.0
+spot_range = 6.0
 
 [node name="OmniLight3" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -2.7728, 4.84484, 0 )
 light_color = Color( 1, 0, 0, 1 )
 light_energy = 50.0
+spot_range = 6.0
 
 [node name="OmniLight2" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 4.84484, 2.10663 )
 light_color = Color( 1, 0, 0, 1 )
 light_energy = 50.0
+spot_range = 6.0
