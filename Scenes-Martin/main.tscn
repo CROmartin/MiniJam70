@@ -1,14 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes-Martin/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes-Jordan/Blockout.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes-Jordan/PlayArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes-Martin/Cleansing light.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes-Martin/Cleasing light semi.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes-Martin/Scripts-Martin/PlayArea.gd" type="Script" id=6]
 
 [sub_resource type="Environment" id=1]
 background_mode = 2
-ambient_light_color = Color( 0.431373, 0.431373, 0.431373, 1 )
 
 [node name="main" type="Spatial"]
 
@@ -16,7 +16,8 @@ ambient_light_color = Color( 0.431373, 0.431373, 0.431373, 1 )
 transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 19.2751, 2.20702, 0.495051 )
 
 [node name="PlayArea" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0210342, 0.641807, -0.0319557 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0 )
+script = ExtResource( 6 )
 
 [node name="Blockout" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.674653, 0 )

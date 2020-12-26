@@ -77,9 +77,11 @@ func tilting(delta):
 	if tilt == 1:
 		$body.translation.y += tilt_speed*tilt;
 		tilt_range -= 1;
+		$OmniLight.light_energy += 0.001;
 	else:
 		$body.translation.y += tilt_speed*tilt; 
 		tilt_range -= 1;
+		$OmniLight.light_energy -= 0.001;
 		
 	
 	if tilt_range == 0:
