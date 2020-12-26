@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Materials/CenterArena.tres" type="Material" id=1]
+[ext_resource path="res://Assets/Meshes/CenterArena.dae" type="PackedScene" id=2]
+
+[node name="CenterArena" instance=ExtResource( 2 )]
+
+[node name="CenterArena" parent="." index="0"]
+material/0 = ExtResource( 1 )
+
+[node name="OmniLight" type="OmniLight" parent="." index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.18609, 0 )
+light_color = Color( 0.992157, 0.929412, 0.592157, 1 )
+light_energy = 2.5
+omni_range = 9.0

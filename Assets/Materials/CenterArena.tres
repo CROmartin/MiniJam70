@@ -1,0 +1,21 @@
+[gd_resource type="SpatialMaterial" load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Textures/CenterArena_Color.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/CenterArena_Roughness.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Textures/CenterArena_Emission.png" type="Texture" id=3]
+
+[resource]
+albedo_color = Color( 0.956863, 0.956863, 0.956863, 1 )
+albedo_texture = ExtResource( 1 )
+metallic = 0.81
+metallic_specular = 0.1
+metallic_texture_channel = 4
+roughness = 0.94
+roughness_texture = ExtResource( 2 )
+roughness_texture_channel = 4
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 0.75
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 3 )
