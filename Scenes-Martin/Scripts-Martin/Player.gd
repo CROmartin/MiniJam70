@@ -10,9 +10,7 @@ var second_pos;
 var tilt_pos = Vector3(0,0,0);
 var posToMove = Vector3(0,0,0);
 var part_change = 0;
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,41 +19,41 @@ func _ready():
 	tilt_pos.y -= 0.15;
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-
-
 func _physics_process(delta):
 	if part_change == 1:
-		$body/Particles.tangential_accel = 30;
+		$body/Particles.process_material.set("tangential_accel", 30);
+		$body/Particles2.process_material.set("linear_accel", 8);
 	else:
-		$body/Particles.tangential_accel = 5;
+		$body/Particles.process_material.set("tangential_accel", 5);
+		$body/Particles2.process_material.set("linear_accel", 0.2);
+	$body.rotation_degrees.y += 1;
+	
 	posToMove.x = 0;
 	posToMove.z = 0;
 	if Input.is_action_pressed("up"):
 		posToMove.z = 1*move_speed; # -1
 		posToMove.x = -1*move_speed;
+		move_and_slide(posToMove, Vector3(0,3,0));
 		
 	if Input.is_action_pressed("down"):
 		posToMove.z = -1*move_speed; # 1
 		posToMove.x = 1*move_speed;
-		
+		move_and_slide(posToMove, Vector3(0,3,0));
 		
 	if Input.is_action_pressed("right"):
 		posToMove.x = -1*move_speed;
 		posToMove.z = -1*move_speed;
+		move_and_slide(posToMove, Vector3(0,3,0));
 		
 	if Input.is_action_pressed("left"):
 		posToMove.z = 1*move_speed;
 		posToMove.x = 1*move_speed;
-		
+		move_and_slide(posToMove, Vector3(0,3,0));
 		
 	tilting(delta)
-	
-	
 		
 	var vec = move_and_slide(posToMove, Vector3(0,3,0));
 	

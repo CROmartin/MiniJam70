@@ -19,9 +19,6 @@ transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107,
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0 )
 script = ExtResource( 6 )
 
-[node name="Blockout" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.674653, 0 )
-
 [node name="Cleansing light" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 25.1267, -0.421424, 12.2919 )
 corner = "CornerPiece2"
@@ -48,3 +45,6 @@ corner = "Semicircle"
 [node name="Cleasing light semi2" parent="." instance=ExtResource( 5 )]
 transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 0, 0, 19.1769 )
 corner = "Semicircle2"
+
+[node name="Blockout" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.664873, 0 )

@@ -30,9 +30,11 @@ func _process(delta):
 		$OmniLight2.visible = true;
 		$OmniLight3.visible = true;
 	
-	if distance < 4 && $OmniLight.light_energy > 0:
+	if distance < 4 && $OmniLight.light_energy > 0 && $OmniLight2.light_energy > 0:
 		corner_id.flicker = 1;
 		player.part_change = 1;
+		$Particles.emitting = true;
+		$Particles2.emitting = false;
 		var d_l = 0.2;
 		var r_l = 4.0;
 		$OmniLight.light_energy = l1;
@@ -51,10 +53,12 @@ func _process(delta):
 		$OmniLight2.light_energy = l2 + rng.randf_range(-r_l, r_l);
 		$OmniLight3.light_energy = l3 + rng.randf_range(-r_l, r_l);
 		
-	if $OmniLight.light_energy <= 0:
+	if ($OmniLight.light_energy <= 0 or $OmniLight2.light_energy <= 0) && corner_id.flicker == 1:
 		$OmniLight.light_energy = 0;
 		$OmniLight2.light_energy = 0;
 		$OmniLight3.light_energy = 0;
 		corner_id.flicker = 0;
 		player.part_change = 0;
+		$Particles.emitting = false;
+		$Particles2.emitting = false;
 	pass
