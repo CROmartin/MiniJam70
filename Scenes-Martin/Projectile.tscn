@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes-Martin/Scripts-Martin/Projectile.gd" type="Script" id=1]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="SphereMesh" id=2]
+
+[sub_resource type="SphereShape" id=3]
+
+[node name="RigidBody" type="RigidBody"]
+input_ray_pickable = false
+mass = 9.8
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+custom_integrator = true
+continuous_cd = true
+contact_monitor = true
+axis_lock_linear_y = true
+linear_damp = 0.0
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+shape = SubResource( 3 )

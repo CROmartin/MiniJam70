@@ -15,7 +15,15 @@ func _ready():
 
 
 func _process(delta):
+	var distance = translation.distance_to(player.translation);
 	
+	if player.pick >= 6:
+		$CenterArena/CSGCombiner.use_collision = false;
+		$CenterArena/Forcefield.visible = false;
+		if distance < 5:
+			$CenterArena/CSGCombiner.use_collision = true;
+			$CenterArena/Forcefield.visible = true;
+			
 	if player.dead == true:
 		max_e = 1
 		min_e = 0.5

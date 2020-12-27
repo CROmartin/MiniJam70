@@ -13,7 +13,7 @@ var part_change = 0;
 var stun = false;
 var dead = false;
 var start_pos = Vector3(0,0,0);
-var pick = 0;
+var pick = 5;
 onready var cl = $CollisionShape;
 
 

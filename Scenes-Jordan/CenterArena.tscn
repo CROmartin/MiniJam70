@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Materials/CenterArena.tres" type="Material" id=1]
 [ext_resource path="res://Assets/Meshes/CenterArena.dae" type="PackedScene" id=2]
@@ -7,12 +7,14 @@
 [sub_resource type="SpatialMaterial" id=1]
 flags_transparent = true
 flags_unshaded = true
-albedo_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 5.03635, 2.07938, 0.390779 )
 
 [node name="CenterArena" instance=ExtResource( 2 )]
 
 [node name="Forcefield" parent="." index="0" instance=ExtResource( 3 )]
-transform = Transform( 0.955, 0, 0, 0, 0.9, 0, 0, 0, 0.955, -0.15, 0.025, 0 )
+transform = Transform( 0.97, 0, 0, 0, 0.97, 0, 0, 0, 0.97, 0, 0, 0 )
 
 [node name="CenterArena" parent="." index="1"]
 material/0 = ExtResource( 1 )
@@ -33,3 +35,24 @@ transform = Transform( 5.5, 0, 0, 0, 2, 0, 0, 0, 5.5, 0, 1, 0 )
 [node name="CSGCylinder2" type="CSGCylinder" parent="CSGCombiner" index="1"]
 transform = Transform( 5, 0, 0, 0, 4, 0, 0, 0, 5, 0, 2, 0 )
 operation = 2
+
+[node name="StaticBody" type="StaticBody" parent="." index="5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30982, 3.74418 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.11647, -2.7921 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2" type="StaticBody" parent="." index="6"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.966994, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.257289, 1.73004, 3.37826 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody2" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.68434e-14, 2.6792, -2.7921 )
+shape = SubResource( 3 )
