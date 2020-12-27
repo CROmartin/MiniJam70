@@ -9,6 +9,7 @@ onready var corner_id = get_tree().get_root().get_node("main/PlayArea/CornerPiec
 onready var l1 = $OmniLight.light_energy;
 onready var l2 = $OmniLight2.light_energy;
 onready var l3 = $OmniLight3.light_energy;
+var picked = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -53,7 +54,7 @@ func _process(delta):
 		$OmniLight2.light_energy = l2 + rng.randf_range(-r_l, r_l);
 		$OmniLight3.light_energy = l3 + rng.randf_range(-r_l, r_l);
 		
-	if ($OmniLight.light_energy <= 0 or $OmniLight2.light_energy <= 0) && corner_id.flicker == 1:
+	if ($OmniLight.light_energy <= 0 or $OmniLight2.light_energy <= 0) && corner_id.flicker == 1 && picked == 0:
 		$OmniLight.light_energy = 0;
 		$OmniLight2.light_energy = 0;
 		$OmniLight3.light_energy = 0;
@@ -61,4 +62,6 @@ func _process(delta):
 		player.part_change = 0;
 		$Particles.emitting = false;
 		$Particles2.emitting = false;
+		picked = 1;
+		player.pick += 1;
 	pass
