@@ -10,13 +10,17 @@ var second_pos;
 var tilt_pos = Vector3(0,0,0);
 var posToMove = Vector3(0,0,0);
 var part_change = 0;
-
+var stun = false;
+var dead = false;
+var start_pos = Vector3(0,0,0);
+onready var cl = $CollisionShape;
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	tilt_pos = translation;
 	tilt_pos.y -= 0.15;
+	start_pos = translation;
 	pass # Replace with function body.
 
 #func _process(delta):
@@ -31,50 +35,74 @@ func _physics_process(delta):
 		$body/Particles2.process_material.set("linear_accel", 0.2);
 	$body.rotation_degrees.y += 1;
 	
-	posToMove.x = 0;
-	posToMove.z = 0;
-	if Input.is_action_pressed("up"):
-		posToMove.z = 1*move_speed; # -1
-		posToMove.x = -1*move_speed;
-		move_and_slide(posToMove, Vector3(0,3,0));
-		
-	if Input.is_action_pressed("down"):
-		posToMove.z = -1*move_speed; # 1
-		posToMove.x = 1*move_speed;
-		move_and_slide(posToMove, Vector3(0,3,0));
-		
-	if Input.is_action_pressed("right"):
-		posToMove.x = -1*move_speed;
-		posToMove.z = -1*move_speed;
-		move_and_slide(posToMove, Vector3(0,3,0));
-		
-	if Input.is_action_pressed("left"):
-		posToMove.z = 1*move_speed;
-		posToMove.x = 1*move_speed;
-		move_and_slide(posToMove, Vector3(0,3,0));
-		
-	tilting(delta)
-		
-	var vec = move_and_slide(posToMove, Vector3(0,3,0));
-	
-	if !is_on_floor():
-		if !translation.y+vec.y > translation.y: 
-			posToMove.y -= gravity * delta;
+	if !dead:
+		posToMove.x = 0;
+		posToMove.z = 0;
+		if Input.is_action_pressed("up"):
+			posToMove.z = 1*move_speed; # -1
+			posToMove.x = -1*move_speed;
+			move_and_slide(posToMove, Vector3(0,3,0));
+			
+		if Input.is_action_pressed("down"):
+			posToMove.z = -1*move_speed; # 1
+			posToMove.x = 1*move_speed;
+			move_and_slide(posToMove, Vector3(0,3,0));
+			
+		if Input.is_action_pressed("right"):
+			posToMove.x = -1*move_speed;
+			posToMove.z = -1*move_speed;
+			move_and_slide(posToMove, Vector3(0,3,0));
+			
+		if Input.is_action_pressed("left"):
+			posToMove.z = 1*move_speed;
+			posToMove.x = 1*move_speed;
+			move_and_slide(posToMove, Vector3(0,3,0));
+			
+		if !stun:
+			var vec = move_and_slide(posToMove, Vector3(0,3,0));
+			
+			if !is_on_floor():
+				if !translation.y+vec.y > translation.y: 
+					posToMove.y -= gravity * delta;
+			else:
+				if !translation.y+vec.y > translation.y:
+					posToMove.y = 0;
+					
+			if vec.y > 0:
+				if vec.y < 0.0001:
+					vec.y = 0;
+				
+			if vec.y > 0 && posToMove.y == 0:
+				posToMove.y = 3;
+			elif translation.y+vec.y > translation.y:
+				posToMove.y = 0;
+			
+		tilting(delta)
 	else:
-		if !translation.y+vec.y > translation.y:
-			posToMove.y = 0;
+		var f = 0.1;
+		var distance = translation.distance_to(start_pos);
+		
+		if translation.y > start_pos.y:
+			translation.y -= f;
+		else:
+			translation.y += f;
+		
+		if translation.x > start_pos.x:
+			translation.x -= f;
+		else:
+			translation.x += f;
 			
-			
-	if vec.y > 0:
+		if translation.z > start_pos.z:
+			translation.z -= f;
+		else:
+			translation.z += f;
 		
-		if vec.y < 0.0001:
-			vec.y = 0;
 		
-	if vec.y > 0 && posToMove.y == 0:
-		posToMove.y = 3;
-	elif translation.y+vec.y > translation.y:
-		posToMove.y = 0;
+		if distance < 0.4:
+			dead = false;
+			visible = true;
 		
+		pass
 func tilting(delta):
 	if tilt == 1:
 		$body.translation.y += tilt_speed*tilt;
