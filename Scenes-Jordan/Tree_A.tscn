@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Materials/TreeLeaves.tres" type="Material" id=1]
+[ext_resource path="res://Assets/Materials/Trees.tres" type="Material" id=2]
+[ext_resource path="res://Assets/Meshes/Tree_A.dae" type="PackedScene" id=3]
+
+[node name="Tree_A" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+
+[node name="Tree_A" parent="." index="0"]
+material/0 = ExtResource( 2 )
+
+[node name="Leaves" parent="Tree_A" index="1"]
+material/0 = ExtResource( 1 )
