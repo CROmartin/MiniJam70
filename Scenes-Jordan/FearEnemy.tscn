@@ -87,24 +87,33 @@ material = SubResource( 6 )
 script = ExtResource( 3 )
 
 [node name="FearEnemy" parent="." index="0"]
-transform = Transform( 0.0306176, -0.00259974, 0.999528, -0.173486, 0.984805, 0.0078757, -0.98436, -0.173645, 0.0297013, 3.72966e-19, 1.7, 5.36043e-17 )
+transform = Transform( 0.168351, -0.00738163, 0.985699, 0.0349581, 0.999388, 0.00151353, -0.985107, 0.0342034, 0.168506, 3.72966e-19, 1.7, 5.36043e-17 )
 material/0 = ExtResource( 2 )
+
+[node name="FearEnemy" parent="FearEnemy" index="0"]
+input_ray_pickable = false
 
 [node name="shape0" parent="FearEnemy/FearEnemy" index="0"]
 visible = false
 disabled = true
 
 [node name="Arm_R" parent="FearEnemy" index="1"]
-transform = Transform( -0.886874, -0.237492, -0.396298, -0.0103342, 0.867749, -0.496895, 0.461895, -0.436588, -0.772039, 0.186724, 0.788849, 0.787273 )
+transform = Transform( -0.774704, -0.570529, 0.272635, -0.58064, 0.471134, -0.663995, 0.250381, -0.672703, -0.696262, 0.186724, 0.788849, 0.787273 )
 material/0 = ExtResource( 2 )
+
+[node name="Arm_R" parent="FearEnemy/Arm_R" index="0"]
+input_ray_pickable = false
 
 [node name="shape0" parent="FearEnemy/Arm_R/Arm_R" index="0"]
 visible = false
 disabled = true
 
 [node name="Arm_L" parent="FearEnemy" index="2"]
-transform = Transform( 0.952094, 0.00830109, -0.305691, -0.142445, 0.896601, -0.419305, 0.270602, 0.442762, 0.854831, 0.186724, 0.788849, -0.734532 )
+transform = Transform( 0.947799, -9.61125e-06, -0.318868, -0.185147, 0.814145, -0.550353, 0.25961, 0.580661, 0.771645, 0.186724, 0.788849, -0.734532 )
 material/0 = ExtResource( 2 )
+
+[node name="Arm_L" parent="FearEnemy/Arm_L" index="0"]
+input_ray_pickable = false
 
 [node name="shape0" parent="FearEnemy/Arm_L/Arm_L" index="0"]
 visible = false

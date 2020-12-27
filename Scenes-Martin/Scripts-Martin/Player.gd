@@ -83,24 +83,24 @@ func _physics_process(delta):
 		var distance = translation.distance_to(start_pos);
 		
 		if translation.y > start_pos.y:
-			translation.y -= f;
+			translation.y -= min(f, abs(translation.y - start_pos.y));
 		else:
-			translation.y += f;
+			translation.y += min(f, abs(translation.y - start_pos.y));
 		
 		if translation.x > start_pos.x:
-			translation.x -= f;
+			translation.x -= min(f, abs(translation.x - start_pos.x));
 		else:
-			translation.x += f;
+			translation.x += min(f, abs(translation.x - start_pos.x));
 			
 		if translation.z > start_pos.z:
-			translation.z -= f;
+			translation.z -= min(f, abs(translation.z - start_pos.z));
 		else:
-			translation.z += f;
-		
+			translation.z += min(f, abs(translation.z - start_pos.z));
 		
 		if distance < 0.4:
 			dead = false;
 			visible = true;
+			move_speed = 2;
 		
 		pass
 func tilting(delta):
