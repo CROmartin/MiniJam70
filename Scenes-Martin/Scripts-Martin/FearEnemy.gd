@@ -31,9 +31,12 @@ func _process(delta):
 	var deg = Vector3(0,0,0);
 	var deg1 = Vector3(0,0,0);
 
+	if player.pick >= 6:
+		translation.y -= 0.02;
+		if translation.y < -1:
+			path.queue_free();
 	
-	
-	print(path.rotation_degrees);
+
 		
 	if distance > 0.6 && distance < 4 && player.dead == false:
 		path.pf.set_rotation_mode(0);
@@ -59,7 +62,7 @@ func _process(delta):
 		player.stun = true;
 		
 
-		if rotation_degrees.y < deg1.y+45 && rotation_degrees.y > deg1.y-45:
+		if rotation_degrees.y < deg1.y+45 or rotation_degrees.y > deg1.y-45:
 			if distance <= 2:
 				player.move_speed = 0;
 				
