@@ -56,6 +56,7 @@ corner = "Semicircle2"
 
 [node name="Blockout" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.664873, 0 )
+<<<<<<< HEAD
 
 [node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.42356, 1.02207, 5.36843 )
@@ -67,3 +68,6 @@ rotation_mode = 4
 
 [node name="FearEnemy" parent="Path/PathFollow" instance=ExtResource( 7 )]
 transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, -1.09706, 0 )
+=======
+visible = false
+>>>>>>> b393382bff5e6649dfdf82fcb2b1e8a0e500d94e
