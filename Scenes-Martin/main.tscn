@@ -48,3 +48,4 @@ corner = "Semicircle2"
 
 [node name="Blockout" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.664873, 0 )
+visible = false
