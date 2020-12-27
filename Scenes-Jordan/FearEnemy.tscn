@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Meshes/FearEnemy.dae" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Materials/FearEnemy.tres" type="Material" id=2]
+[ext_resource path="res://Scenes-Martin/Scripts-Martin/FearEnemy.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Attack"
 length = 1.28333
-loop = true
 step = 0.0166667
 tracks/0/type = "transform"
 tracks/0/path = NodePath("FearEnemy/Arm_R")
@@ -58,23 +58,24 @@ tracks/2/enabled = true
 tracks/2/keys = PoolRealArray( 0, 1, 3.55271e-17, 1.5, -8.06126e-17, 0.000918123, 0.696364, -0.121855, 0.707268, 1, 1, 1, 0.2, 1, 1.44346e-17, 1.62, -8.23692e-20, 0.0374008, 0.695224, -0.0119758, 0.717719, 1, 1, 1, 0.333333, 1, 3.72839e-19, 1.7, 5.36042e-17, 0.0616639, 0.693466, 0.0616079, 0.715197, 1, 1, 1, 0.466667, 1, -4.70547e-17, 1.7, 5.44603e-18, -0.0126736, 0.696109, 0.0365888, 0.716891, 1, 1, 1, 0.6, 1, -9.44822e-17, 1.7, -4.27121e-17, -0.0868748, 0.690863, 0.0115288, 0.717655, 1, 1, 1, 0.666667, 1, -1.18196e-16, 1.7, -6.67912e-17, -0.123664, 0.685296, -0.00100394, 0.717688, 1, 1, 1, 0.8, 1, -7.09177e-17, 1.7, -5.75409e-17, -0.0463441, 0.695823, 0.0207657, 0.716415, 1, 1, 1, 0.933333, 1, -2.36392e-17, 1.7, -4.82904e-17, 0.0316068, 0.697732, 0.0422811, 0.714411, 1, 1, 1, 1, 1, -5.91646e-31, 1.7, -4.36652e-17, 0.0705201, 0.695446, 0.0529337, 0.713148, 1, 1, 1, 1.2, 1, 2.03012e-17, 1.58571, -6.4778e-17, 0.0306264, 0.696792, -0.0471715, 0.715064, 1, 1, 1, 1.33333, 1, 3.38354e-17, 1.50952, -7.88532e-17, 0.00420836, 0.696471, -0.113605, 0.708523, 1, 1, 1 )
 
 [node name="FearEnemy" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
 
 [node name="FearEnemy" parent="." index="0"]
-transform = Transform( 0.101482, -0.00142994, 0.994836, -0.0670626, 0.997714, 0.00827504, -0.992575, -0.0675561, 0.101154, 3.72966e-19, 1.7, 5.36043e-17 )
+transform = Transform( 0.000457406, 0.173647, 0.984808, -0.17109, 0.970301, -0.17101, -0.985255, -0.168412, 0.030153, 3.55271e-17, 1.5, -8.06126e-17 )
 material/0 = ExtResource( 2 )
 
 [node name="shape0" parent="FearEnemy/FearEnemy" index="0"]
 visible = false
 
 [node name="Arm_R" parent="FearEnemy" index="1"]
-transform = Transform( -0.889113, -0.4529, -0.0660325, -0.30843, 0.699488, -0.644661, 0.338155, -0.552809, -0.761612, 0.186724, 0.788849, 0.787273 )
+transform = Transform( -0.438699, -0.629266, -0.641535, -0.298628, 0.775415, -0.556376, 0.847564, -0.0525012, -0.52809, 0.186724, 0.788849, 0.787273 )
 material/0 = ExtResource( 2 )
 
 [node name="shape0" parent="FearEnemy/Arm_R/Arm_R" index="0"]
 visible = false
 
 [node name="Arm_L" parent="FearEnemy" index="2"]
-transform = Transform( 0.949874, 0.00432597, -0.312604, -0.164522, 0.857169, -0.488052, 0.265843, 0.515018, 0.814914, 0.186724, 0.788849, -0.734532 )
+transform = Transform( 0.927499, 0.30842, -0.21124, -0.357296, 0.89756, -0.258312, 0.109932, 0.31506, 0.942684, 0.186724, 0.788849, -0.734532 )
 material/0 = ExtResource( 2 )
 
 [node name="shape0" parent="FearEnemy/Arm_L/Arm_L" index="0"]
