@@ -13,7 +13,7 @@ var part_change = 0;
 var stun = false;
 var dead = false;
 var start_pos = Vector3(0,0,0);
-var pick = 5;
+var pick = 0;
 onready var cl = $CollisionShape;
 
 
@@ -28,14 +28,8 @@ func _ready():
 #	pass
 
 func _physics_process(delta):
-	print(pick)
-	if part_change == 1:
-		$body/Particles.process_material.set("tangential_accel", 30);
-		$body/Particles2.process_material.set("linear_accel", 8);
-	else:
-		$body/Particles.process_material.set("tangential_accel", 5);
-		$body/Particles2.process_material.set("linear_accel", 0.2);
-	$body.rotation_degrees.y += 1;
+	
+
 	
 	if !dead:
 		posToMove.x = 0;
@@ -98,13 +92,26 @@ func _physics_process(delta):
 			translation.z -= min(f, abs(translation.z - start_pos.z));
 		else:
 			translation.z += min(f, abs(translation.z - start_pos.z));
+		visible = false;
 		
+		
+		part_change = 1;
 		if distance < 0.4:
 			dead = false;
 			visible = true;
 			move_speed = 2;
+			part_change = 0;
 		
-		pass
+	if part_change == 1:
+		$body/Particles.process_material.set("tangential_accel", 30);
+		$body/Particles2.process_material.set("linear_accel", 8);
+	else:
+		$body/Particles.process_material.set("tangential_accel", 5);
+		$body/Particles2.process_material.set("linear_accel", 0.2);
+	$body.rotation_degrees.y += 1;
+	
+	
+	pass
 func tilting(delta):
 	if tilt == 1:
 		$body.translation.y += tilt_speed*tilt;

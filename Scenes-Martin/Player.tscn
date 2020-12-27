@@ -5,6 +5,8 @@
 [ext_resource path="res://Scenes-Martin/red_particles.tres" type="Material" id=3]
 
 [sub_resource type="CapsuleShape" id=20]
+radius = 0.129031
+height = 0.692163
 
 [sub_resource type="SpatialMaterial" id=16]
 flags_unshaded = true
@@ -78,7 +80,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.222918, 0 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, -0.35, 0, 0.5, -1.5299e-08, 0, 0.758888, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.708029, 0 )
 shape = SubResource( 20 )
 
 [node name="body" type="Spatial" parent="."]
@@ -102,6 +104,13 @@ draw_pass_1 = SubResource( 19 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 12, 11 )
+doppler_tracking = 2
+projection = 1
+current = true
+size = 5.5
+
+[node name="Camera2" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.14737, 11 )
 doppler_tracking = 2
 projection = 1
 size = 5.5

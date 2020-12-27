@@ -36,7 +36,7 @@ _data = {
 [node name="main" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 18.5255, 1.10761, -0.124807 )
+transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 18.5255, 0.587435, -0.124807 )
 
 [node name="PlayArea" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0 )
@@ -113,9 +113,8 @@ path_name = "Path3"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781998, 0 )
 script = ExtResource( 10 )
 
-[node name="RigidBody" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72932, -1.49739 )
-
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 9.58331, 0 )
-current = true
+
+[node name="RigidBody" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7479, 1.94549, 0 )

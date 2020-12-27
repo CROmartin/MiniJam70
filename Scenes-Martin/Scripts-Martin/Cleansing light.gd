@@ -57,7 +57,7 @@ func _process(delta):
 		$OmniLight2.light_energy = l2 + rng.randf_range(0, r_l);
 		$OmniLight3.light_energy = l3 + rng.randf_range(0, r_l);
 		
-	if ($OmniLight.light_energy <= 0 or $OmniLight2.light_energy <= 0 or $OmniLight3.light_energy <= 0) && corner_id.flicker == 1 && picked == 0:
+	if ($OmniLight.light_energy <= 0 or $OmniLight2.light_energy <= 0 or $OmniLight3.light_energy <= 0) && corner_id.flicker == 1 && picked == 0 && player.pick < 6:
 		$OmniLight.light_energy = 0;
 		$OmniLight2.light_energy = 0;
 		$OmniLight3.light_energy = 0;

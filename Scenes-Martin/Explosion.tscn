@@ -1,0 +1,192 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Scenes-Martin/Fire.tres" type="Gradient" id=1]
+[ext_resource path="res://Scenes-Martin/SparksGradient.tres" type="Gradient" id=2]
+[ext_resource path="res://Scenes-Martin/Spark.png" type="Texture" id=3]
+[ext_resource path="res://Scenes-Martin/Smoke30Frames_0.png" type="Texture" id=4]
+[ext_resource path="res://Scenes-Martin/Explosion.gd" type="Script" id=5]
+
+[sub_resource type="GradientTexture" id=1]
+gradient = ExtResource( 1 )
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.413793, 0.596591 ), 0.0, 0.0, 0, 0, Vector2( 0.978056, 0.0602273 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+trail_divisor = 12
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 20.0
+initial_velocity_random = 1.0
+angular_velocity = 40.0
+angular_velocity_random = 1.0
+linear_accel = 4.0
+linear_accel_random = 1.0
+angle = 360.0
+angle_random = 1.0
+scale = 3.0
+scale_random = 0.8
+scale_curve = SubResource( 3 )
+color_ramp = SubResource( 1 )
+hue_variation = -0.01
+hue_variation_random = 1.0
+anim_speed = 1.0
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 6
+particles_anim_v_frames = 5
+particles_anim_loop = true
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="QuadMesh" id=6]
+material = SubResource( 5 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = ExtResource( 2 )
+
+[sub_resource type="Curve" id=8]
+_data = [ Vector2( 0, 0.515909 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+emission_shape = 1
+emission_sphere_radius = 0.3
+direction = Vector3( 0, 1, 0 )
+spread = 137.44
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 1.0
+angular_velocity = 40.0
+angular_velocity_random = 1.0
+linear_accel = 2.0
+linear_accel_random = 1.0
+radial_accel = 0.2
+radial_accel_random = 1.0
+angle = 360.0
+angle_random = 1.0
+scale = 2.0
+scale_random = 1.0
+scale_curve = SubResource( 9 )
+color_ramp = SubResource( 7 )
+anim_speed = 1.0
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=11]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_billboard_mode = 3
+particles_anim_h_frames = 6
+particles_anim_v_frames = 5
+particles_anim_loop = true
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="QuadMesh" id=12]
+material = SubResource( 11 )
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0, 0.127148, 0.308017, 0.694158, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0, 1, 0.976563, 1, 0, 0.15625, 1, 1, 0, 0.410902, 0.441979, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=14]
+gradient = SubResource( 13 )
+
+[sub_resource type="Curve" id=15]
+_data = [ Vector2( 0, 0.5125 ), 0.0, 0.0, 0, 0, Vector2( 0.465909, 0.976136 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=16]
+curve = SubResource( 15 )
+
+[sub_resource type="ParticlesMaterial" id=17]
+trail_divisor = 5
+emission_shape = 1
+emission_sphere_radius = 0.6
+direction = Vector3( 0, 1, 0 )
+spread = 180.0
+flatness = 0.09
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 9.61
+initial_velocity_random = 1.0
+linear_accel = 5.0
+linear_accel_random = 1.0
+tangential_accel = 5.0
+tangential_accel_random = 1.0
+damping = 2.0
+damping_random = 1.0
+scale = 0.1
+scale_random = 0.3
+scale_curve = SubResource( 16 )
+color_ramp = SubResource( 14 )
+
+[sub_resource type="SpatialMaterial" id=18]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="QuadMesh" id=19]
+material = SubResource( 18 )
+size = Vector2( 0.2, 0.2 )
+
+[node name="Explosion" type="Spatial"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
+script = ExtResource( 5 )
+
+[node name="Flames" type="Particles" parent="."]
+amount = 1000
+lifetime = 0.5
+explosiveness = 1.0
+randomness = 1.0
+visibility_aabb = AABB( -1.49635, -0.001, -0.775192, 2.99269, 0.002, 1.55038 )
+draw_order = 2
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 6 )
+
+[node name="Smoke" type="Particles" parent="Flames"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.792789, 0 )
+amount = 100
+lifetime = 0.5
+explosiveness = 1.0
+randomness = 1.0
+visibility_aabb = AABB( -1.49635, -0.001, -0.775192, 2.99269, 0.002, 1.55038 )
+draw_order = 2
+process_material = SubResource( 10 )
+draw_pass_1 = SubResource( 12 )
+
+[node name="Sparks" type="Particles" parent="Flames"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.161259, 1.20657, 0 )
+amount = 300
+lifetime = 0.83
+explosiveness = 0.52
+randomness = 1.0
+visibility_aabb = AABB( -4, -0.533144, -4, 8, 1.06629, 8 )
+draw_order = 2
+process_material = SubResource( 17 )
+draw_pass_1 = SubResource( 19 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+light_color = Color( 0.219608, 0, 1, 1 )
+light_energy = 10.0
+shadow_enabled = true
+omni_range = 15.0
