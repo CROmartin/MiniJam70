@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sc_sfx-pc-hit.wav-78010c5eb21f7fcf986fb59a4b51db46.sample"
+
+[deps]
+
+source_file="res://Music/sfx/sc_sfx-pc-hit.wav"
+dest_files=[ "res://.import/sc_sfx-pc-hit.wav-78010c5eb21f7fcf986fb59a4b51db46.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

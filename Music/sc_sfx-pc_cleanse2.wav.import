@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sc_sfx-pc_cleanse2.wav-91216be28f471a0c9c7dd81ae68b1e2a.sample"
+
+[deps]
+
+source_file="res://Music/sc_sfx-pc_cleanse2.wav"
+dest_files=[ "res://.import/sc_sfx-pc_cleanse2.wav-91216be28f471a0c9c7dd81ae68b1e2a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

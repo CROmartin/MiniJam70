@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sc_sfx-boss-attack.wav-0629166c1e9b58547f501aae1fec093c.sample"
+
+[deps]
+
+source_file="res://Music/sfx/sc_sfx-boss-attack.wav"
+dest_files=[ "res://.import/sc_sfx-boss-attack.wav-0629166c1e9b58547f501aae1fec093c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

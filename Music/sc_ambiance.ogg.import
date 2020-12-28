@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sc_ambiance.ogg-dd7274f7055ba9e478a05400a27a97c3.oggstr"
+
+[deps]
+
+source_file="res://Music/sc_ambiance.ogg"
+dest_files=[ "res://.import/sc_ambiance.ogg-dd7274f7055ba9e478a05400a27a97c3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

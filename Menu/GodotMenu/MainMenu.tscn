@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://psychedelic-art-theme_7.jpg" type="Texture" id=1]
+[ext_resource path="res://MenuButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://jej.png" type="Texture" id=3]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 513.68, 299.64 )
+scale = Vector2( 2.25878, 2.34191 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" parent="." instance=ExtResource( 2 )]
+margin_left = 115.113
+margin_top = 384.93
+margin_right = 312.113
+margin_bottom = 451.93
+focus_neighbour_left = NodePath("../Button2")
+focus_neighbour_right = NodePath("../Button2")
+text = "Start game"
+icon = ExtResource( 3 )
+align = 0
+start_focused = true
+
+[node name="Button2" parent="." instance=ExtResource( 2 )]
+margin_left = 710.443
+margin_top = 384.35
+margin_right = 907.443
+margin_bottom = 451.35
+focus_neighbour_left = NodePath("../Button")
+focus_neighbour_right = NodePath("../Button")
+text = "Quit"
+icon = ExtResource( 3 )
+clip_text = true
+align = 0

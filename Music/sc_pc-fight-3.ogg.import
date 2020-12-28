@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sc_pc-fight-3.ogg-726ed25e97f8df0d0eff7c113c76dd7a.oggstr"
+
+[deps]
+
+source_file="res://Music/sc_pc-fight-3.ogg"
+dest_files=[ "res://.import/sc_pc-fight-3.ogg-726ed25e97f8df0d0eff7c113c76dd7a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

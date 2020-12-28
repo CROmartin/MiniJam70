@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sc_pc-light-1.ogg-4a81b576e0601543846941dce502a9ff.oggstr"
+
+[deps]
+
+source_file="res://Music/sc_pc-light-1.ogg"
+dest_files=[ "res://.import/sc_pc-light-1.ogg-4a81b576e0601543846941dce502a9ff.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

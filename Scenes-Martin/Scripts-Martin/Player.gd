@@ -15,6 +15,7 @@ var dead = false;
 var start_pos = Vector3(0,0,0);
 var pick = 0;
 onready var cl = $CollisionShape;
+onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
 
 
 # Called when the node enters the scene tree for the first time.
@@ -34,26 +35,35 @@ func _physics_process(delta):
 	if !dead:
 		posToMove.x = 0;
 		posToMove.z = 0;
+		var mas = Vector3(0,0,0);
 		if Input.is_action_pressed("up"):
 			posToMove.z = 1*move_speed; # -1
 			posToMove.x = -1*move_speed;
-			move_and_slide(posToMove, Vector3(0,3,0));
+			$PlayerNew/AnimationPlayer.play("Bounce");
+			mas = move_and_slide(posToMove, Vector3(0,3,0));
 			
 		if Input.is_action_pressed("down"):
 			posToMove.z = -1*move_speed; # 1
 			posToMove.x = 1*move_speed;
-			move_and_slide(posToMove, Vector3(0,3,0));
+			$PlayerNew/AnimationPlayer.play("Bounce");
+			mas = move_and_slide(posToMove, Vector3(0,3,0));
 			
 		if Input.is_action_pressed("right"):
 			posToMove.x = -1*move_speed;
 			posToMove.z = -1*move_speed;
-			move_and_slide(posToMove, Vector3(0,3,0));
+			$PlayerNew/AnimationPlayer.play("Bounce");
+			mas = move_and_slide(posToMove, Vector3(0,3,0));
 			
 		if Input.is_action_pressed("left"):
 			posToMove.z = 1*move_speed;
 			posToMove.x = 1*move_speed;
-			move_and_slide(posToMove, Vector3(0,3,0));
-			
+			$PlayerNew/AnimationPlayer.play("Bounce");
+			mas = move_and_slide(posToMove, Vector3(0,3,0));
+		
+#		$PlayerNew.look_at_from_position(translation,posToMove, Vector3(0,1,0));
+		
+		if !Input.is_action_pressed("up") && !Input.is_action_pressed("down") && !Input.is_action_pressed("right") && !Input.is_action_pressed("left"):
+			$PlayerNew/AnimationPlayer.play("Idle");
 		if !stun:
 			var vec = move_and_slide(posToMove, Vector3(0,3,0));
 			
@@ -77,7 +87,7 @@ func _physics_process(delta):
 	else:
 		var f = 0.2;
 		var distance = translation.distance_to(start_pos);
-		
+		music.change_song("sc_pc_idle");
 		if translation.y > start_pos.y:
 			translation.y -= min(f, abs(translation.y - start_pos.y));
 		else:
@@ -109,6 +119,7 @@ func _physics_process(delta):
 		$body/Particles.process_material.set("tangential_accel", 5);
 		$body/Particles2.process_material.set("linear_accel", 0.2);
 	$body.rotation_degrees.y += 1;
+	$PlayerNew.rotation_degrees.y += 1;
 	
 	
 	pass

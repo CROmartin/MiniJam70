@@ -5,7 +5,7 @@ extends RigidBody
 # var a = 2
 # var b = "text"
 var timer = 100;
-var timer_2 = 600;
+var timer_2 = 320;
 var ex = preload("res://Scenes-Martin/Explosion.tscn");
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,7 +20,7 @@ func _process(delta):
 	if timer > 0:
 		timer -= 1;
 	else:
-		linear_velocity = linear_velocity*1.2;
+		linear_velocity = linear_velocity*1.3;
 		timer = 60
 		
 	if timer_2 > 0:

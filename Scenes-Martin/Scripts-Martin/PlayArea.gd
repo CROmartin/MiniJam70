@@ -6,9 +6,11 @@ extends Spatial
 # var b = "text"
 var field = preload("res://Scenes-Jordan/Forcefield.tscn");
 onready var player = get_tree().get_root().get_node("main/Player");
+onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
 var para = 1.0;
-var max_e = 0.3;
-var min_e = 0.2;
+var para2 = 1.0;
+var max_e = 0.2;
+var min_e = 0.1;
 var c_destroyed = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,6 +20,13 @@ func _ready():
 
 func _process(delta):
 	var distance = translation.distance_to(player.translation);
+	if player.dead == true:
+		max_e = 1
+		min_e = 0.5
+	else:
+		max_e = 0.3
+		min_e = 0.1
+		
 	if player.pick >= 6:
 		if c_destroyed == false:
 			$CenterArena/Cylinder.queue_free();
@@ -27,13 +36,17 @@ func _process(delta):
 		if distance < 5.3:
 			$CenterArena/Forcefield.visible = true;
 			$CenterArena/Forcefield.translation.y = 0;
+			max_e = 2;
+			min_e = 0.5;
+			$CenterArena/CenterArena.get_surface_material(0).emission_energy += 0.05*para2;
+	
+			if $CenterArena/CenterArena.get_surface_material(0).emission_energy >= 4 && para2 == 1:
+				para2 = para2*-1
+				
+			if $CenterArena/CenterArena.get_surface_material(0).emission_energy <= 1 && para2 == -1:
+				para2 = para2*-1
 			
-	if player.dead == true:
-		max_e = 1
-		min_e = 0.5
-	else:
-		max_e = 0.3
-		min_e = 0.1
+	
 		
 	$PlayArea.get_surface_material(0).emission_energy += 0.001*para;
 	

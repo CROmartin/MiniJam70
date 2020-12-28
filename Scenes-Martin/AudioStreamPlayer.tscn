@@ -1,0 +1,83 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Music/sc_ambiance.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Music/sc_pc-idle.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Music/sc_pc-light-1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Music/sc_pc-fight-1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Music/sc_pc-light-2.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Music/sc_pc-fight-2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Music/sc_pc-fight-3.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Music/sc_pc-monster_close_1.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Music/sc_pc-monster_close_3.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Music/sc_pc-monster_close_2.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Scenes-Martin/Scripts-Martin/AudioStreamPlayer.gd" type="Script" id=11]
+[ext_resource path="res://Music/sc_sfx-pc_cleanse2.wav" type="AudioStream" id=12]
+[ext_resource path="res://Music/sfx/sc_sfx-boss-attack.wav" type="AudioStream" id=13]
+[ext_resource path="res://Music/sfx/sc_sfx-pc-move.wav" type="AudioStream" id=14]
+[ext_resource path="res://Music/sfx/sc_sfx-pc-move_start.wav" type="AudioStream" id=15]
+[ext_resource path="res://Music/sfx/sc_sfx-pc-hit.wav" type="AudioStream" id=16]
+
+[node name="AudioStreamPlayer" type="Node"]
+script = ExtResource( 11 )
+
+[node name="sc_ambiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+bus = "Background"
+
+[node name="sc_pc_idle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="sc_pc-fight-1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="sc_pc-fight-2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="sc_pc-fight-3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="sc_pc_light-1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="sc_pc_light-2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="sc_pc-moster_close_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="sc_pc-moster_close_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="sc_pc-moster_close_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="sc_pc-victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="sfx_cleanse" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+bus = "Sounds"
+
+[node name="sfx_boss-attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+bus = "Sounds"
+
+[node name="sfx_boss-death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+bus = "Sounds"
+
+[node name="sfx_pc-move_start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+mix_target = 1
+bus = "Sounds"
+
+[node name="sfx_pc-move" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+mix_target = 1
+bus = "Sounds"
+
+[node name="sfx_pc-hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+mix_target = 1
+bus = "Sounds"

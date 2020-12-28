@@ -1698,23 +1698,11 @@ script = null
 [node name="CenterArena" parent="PlayArea" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0 )
 
-[node name="ForceWall" parent="PlayArea/CenterArena" index="0"]
-visible = false
-
-[node name="Forcefield" parent="PlayArea/CenterArena" index="1"]
+[node name="Forcefield" parent="PlayArea/CenterArena" index="0"]
 visible = false
 
 [node name="shape0" parent="PlayArea/CenterArena/CenterArena/CenterArena" index="0"]
 transform = Transform( 1, -2.64698e-23, 0, 1.85288e-22, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="CSGCombiner" parent="PlayArea/CenterArena" index="5"]
-visible = false
-
-[node name="StaticBody" parent="PlayArea/CenterArena" index="6"]
-visible = false
-
-[node name="StaticBody2" parent="PlayArea/CenterArena" index="7"]
-visible = false
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.992546, -0.121869, -1.11022e-16, 0.118746, 0.967107, -0.224951, 0.0274146, 0.223274, 0.97437, 0, 2.2, -0.5 )

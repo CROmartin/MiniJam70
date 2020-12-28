@@ -1,0 +1,10 @@
+Start with pc_idle
+when the first monster is encourntered switch to pc_monster_close_1
+after the first encounter don't go back to pc_idle. Monster_close_1 will stay as the backing track.
+if the PC gets closer to a monster shigt to mosnter_close_2.
+If the PC gets attacked by monster shift to monster_close_3 and play through until the character resets at the beginning. THEN go back to pc_idle.
+Switch to pc_light_1 upon entering a lit area. If the player gets "cleansed" (first visit" play light_close_2
+For the boss fight just move through the stems evenly as PC gets closer to winning. 
+
+I'll try and get victory and defeat music in there too if I get the sfx done in time.
+

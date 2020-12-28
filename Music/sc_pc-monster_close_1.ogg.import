@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sc_pc-monster_close_1.ogg-24967c6a16c155600b0c979a1b1a43eb.oggstr"
+
+[deps]
+
+source_file="res://Music/sc_pc-monster_close_1.ogg"
+dest_files=[ "res://.import/sc_pc-monster_close_1.ogg-24967c6a16c155600b0c979a1b1a43eb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -4,7 +4,7 @@ onready var player = get_tree().get_root().get_node("Player");
 var rng = RandomNumberGenerator.new()
 export var corner = "";
 onready var corner_id = get_tree().get_root().get_node("main/PlayArea/CornerPiece2")
-# Declare member variables here. Examples:
+onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
 # var a = 2
 # var b = "text"
 onready var l1 = $OmniLight.light_energy;
@@ -36,6 +36,8 @@ func _process(delta):
 	if distance < 4 && $OmniLight.light_energy > 0 && $OmniLight2.light_energy > 0 && $OmniLight3.light_energy > 0:
 		corner_id.flicker = 1;
 		player.part_change = 1;
+		
+		music.change_song("sc_pc_light-1");
 		$Particles.emitting = true;
 		$Particles2.emitting = false;
 		var d_l = 0.2;
@@ -65,6 +67,10 @@ func _process(delta):
 		player.part_change = 0;
 		$Particles.emitting = false;
 		$Particles2.emitting = false;
+		if picked == 0:
+			music.change_song("sc_pc_light-2");
+			music.play_sound("sfx_cleanse");
 		picked = 1;
 		player.pick += 1;
+		
 		pass

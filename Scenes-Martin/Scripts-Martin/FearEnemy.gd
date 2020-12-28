@@ -1,9 +1,11 @@
 extends Spatial
 
 export var path_name = "";
+export var music_num = "";
 onready var path = get_tree().get_root();
 onready var player = get_tree().get_root().get_node("main/Player");
 
+onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,7 +39,9 @@ func _process(delta):
 			path.queue_free();
 	
 
-		
+	if distance < 5:
+		music.change_song("sc_pc-moster_close_"+music_num);
+	
 	if distance > 0.6 && distance < 4 && player.dead == false:
 		path.pf.set_rotation_mode(0);
 		
@@ -87,6 +91,7 @@ func _process(delta):
 			player.visible = false;
 			player.dead = true;
 			player.stun = true;
+			music.play_sound("sfx_pc-hit");
 		path.stop = false;
 		player.cl.disabled = false;
 		player.stun = false;
