@@ -5,8 +5,8 @@ extends Spatial
 # var a = 2
 # var b = "text"
 var field = preload("res://Scenes-Jordan/Forcefield.tscn");
-onready var player = get_tree().get_root().get_node("main/Player");
-onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
+onready var player = get_tree().get_root().get_node("real_main/main/Player");
+onready var music = get_tree().get_root().get_node("real_main/main/AudioStreamPlayer");
 var para = 1.0;
 var para2 = 1.0;
 var max_e = 0.2;

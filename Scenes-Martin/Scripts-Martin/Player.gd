@@ -15,7 +15,7 @@ var dead = false;
 var start_pos = Vector3(0,0,0);
 var pick = 0;
 onready var cl = $CollisionShape;
-onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
+onready var music = get_tree().get_root().get_node("real_main/main/AudioStreamPlayer");
 
 
 # Called when the node enters the scene tree for the first time.
@@ -111,6 +111,7 @@ func _physics_process(delta):
 			visible = true;
 			move_speed = 2;
 			part_change = 0;
+			music.change_song("sc_pc_idle");
 		
 	if part_change == 1:
 		$body/Particles.process_material.set("tangential_accel", 30);

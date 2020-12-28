@@ -1,7 +1,7 @@
 extends Spatial
 
-onready var player = get_tree().get_root().get_node("main/Player");
-onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
+onready var player = get_tree().get_root().get_node("real_main/main/Player");
+onready var music = get_tree().get_root().get_node("real_main/main/AudioStreamPlayer");
 var ball = preload("res://Scenes-Martin/Projectile.tscn");
 var timer = 0;
 # Called when the node enters the scene tree for the first time.
