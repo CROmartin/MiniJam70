@@ -22,6 +22,7 @@ script = ExtResource( 11 )
 
 [node name="sc_ambiance" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+autoplay = true
 bus = "Background"
 
 [node name="sc_pc_idle" type="AudioStreamPlayer" parent="."]

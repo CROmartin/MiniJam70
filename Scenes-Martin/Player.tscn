@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes-Jordan/PlayerNew.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes-Jordan/PlayerSmoke.tscn" type="PackedScene" id=5]
 
-[sub_resource type="CapsuleShape" id=20]
+[sub_resource type="CapsuleShape" id=23]
 radius = 0.129031
 height = 0.692163
 
@@ -89,23 +89,24 @@ script = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.708029, 0 )
-shape = SubResource( 20 )
+shape = SubResource( 23 )
 
 [node name="body" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02049, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="body"]
 transform = Transform( 0.1, 0, 0, 0, -4.37114e-09, 0.1, 0, -0.1, -4.37114e-09, 0, 0.978024, 0 )
 
 [node name="Particles" type="Particles" parent="body"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.969639, 0 )
-amount = 20
+amount = 40
 lifetime = 5.0
 process_material = ExtResource( 3 )
 draw_pass_1 = SubResource( 22 )
 
 [node name="Particles2" type="Particles" parent="body"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.969639, 0 )
-amount = 50
+amount = 100
 lifetime = 5.0
 process_material = SubResource( 15 )
 draw_pass_1 = SubResource( 19 )

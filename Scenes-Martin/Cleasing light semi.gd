@@ -3,8 +3,8 @@ extends Spatial
 onready var player = get_tree().get_root().get_node("Player");
 var rng = RandomNumberGenerator.new()
 export var corner = "";
-onready var corner_id = get_tree().get_root().get_node("main/PlayArea/CornerPiece2")
-onready var music = get_tree().get_root().get_node("main/AudioStreamPlayer");
+onready var corner_id = get_tree().get_root().get_node("real_main/main/PlayArea/CornerPiece2")
+onready var music = get_tree().get_root().get_node("real_main/main/AudioStreamPlayer");
 
 onready var l1 = $OmniLight.light_energy;
 onready var l2 = $OmniLight2.light_energy;
@@ -14,13 +14,13 @@ var picked = 0;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize();
-	corner = "main/PlayArea/" + corner;
+	corner = "real_main/main/PlayArea/" + corner;
 	corner_id = get_tree().get_root().get_node(corner)
 	print(corner);
 	pass # Replace with function body.
 
 func _process(delta):
-	player = get_tree().get_root().get_node("main/Player");
+	player = get_tree().get_root().get_node("real_main/main/Player");
 	var distance = translation.distance_to(player.translation);
 	if distance > 9:
 		$OmniLight.visible = false;
