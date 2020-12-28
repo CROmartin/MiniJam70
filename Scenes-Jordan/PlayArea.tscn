@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Meshes/PlayArea.dae" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Materials/PlayArea.tres" type="Material" id=2]
@@ -14,6 +14,10 @@
 [ext_resource path="res://Scenes-Jordan/Tree_A.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes-Jordan/Tree_B.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes-Jordan/Tree_C.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes-Jordan/BlockTiles_Config_B.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes-Jordan/BlockTiles_Config_D.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes-Jordan/BlockTiles_Config_A.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes-Jordan/BlockTiles_Config_C.tscn" type="PackedScene" id=18]
 
 [node name="PlayArea" instance=ExtResource( 1 )]
 
@@ -21,119 +25,93 @@
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.1938, 0, -2.64458 )
 
 [node name="Tree_A3" parent="." index="1" instance=ExtResource( 12 )]
-transform = Transform( -0.197258, -0.0421846, -0.506164, 0.1949, 0.495143, -0.117221, 0.469037, -0.223488, -0.164164, 0.57308, 0, -11.8156 )
+transform = Transform( -0.204526, -0.0609802, -0.501341, 0.195855, 0.488987, -0.139378, 0.465513, -0.232522, -0.161628, 0.948812, 0, -11.5148 )
 
 [node name="Tree_A2" parent="." index="2" instance=ExtResource( 12 )]
 transform = Transform( -0.166777, 0, 0.452459, 0, 0.482218, 0, -0.452459, 0, -0.166777, 20.1042, 0, 8.55984 )
 
-[node name="Tree_B" parent="." index="3" instance=ExtResource( 13 )]
+[node name="Tree_A4" parent="." index="3" instance=ExtResource( 12 )]
+transform = Transform( -0.464556, 0.0648968, -0.111849, 0.0919268, 0.459082, -0.115443, 0.090946, -0.132537, -0.454639, -8.93292, -2.38419e-07, -9.46782 )
+
+[node name="Tree_A5" parent="." index="4" instance=ExtResource( 12 )]
+transform = Transform( 0.258798, -0.0865275, -0.274663, 0.0478361, 0.37707, -0.0737155, 0.283969, 0.0153384, 0.262735, -17.9155, -2.38419e-07, -3.36951 )
+
+[node name="Tree_B" parent="." index="5" instance=ExtResource( 13 )]
 transform = Transform( 0.60853, 0.0587916, -0.00159186, -0.0587572, 0.607006, -0.0431095, -0.0025651, 0.0430626, 0.609841, 0.0228205, 0, 11.9262 )
 
-[node name="Tree_B2" parent="." index="4" instance=ExtResource( 13 )]
+[node name="Tree_B3" parent="." index="6" instance=ExtResource( 13 )]
+transform = Transform( -0.0141333, 0.162243, 0.589274, -0.0570897, 0.586505, -0.16285, -0.60853, -0.0587916, 0.00159183, 8.64061, -0.0509932, -13.6326 )
+
+[node name="Tree_B4" parent="." index="7" instance=ExtResource( 13 )]
+transform = Transform( -0.73886, 0.0767196, -0.0407372, 0.0751299, 0.739532, 0.0301004, 0.0435996, 0.0257805, -0.742222, -26.0976, -0.0386269, -3.74439 )
+
+[node name="Tree_B6" parent="." index="8" instance=ExtResource( 13 )]
+transform = Transform( -0.84504, -0.277464, -0.127908, -0.288952, 0.84801, 0.0694576, 0.0992627, 0.10645, -0.886709, -9.96462, -0.0386281, 5.50216 )
+
+[node name="Tree_B5" parent="." index="9" instance=ExtResource( 13 )]
+transform = Transform( -0.702025, 0.0404484, 0.242867, 0.0714226, 0.735741, 0.0839175, -0.235625, 0.102505, -0.698163, -8.99504, 0.0186489, 12.3557 )
+
+[node name="Tree_B2" parent="." index="10" instance=ExtResource( 13 )]
 transform = Transform( 0.0664866, 0.0494542, 0.605723, 0.0419798, 0.607508, -0.0542078, -0.606287, 0.0474876, 0.0626713, 24.3832, 0.0114484, -4.33209 )
 
-[node name="Tree_C" parent="." index="5" instance=ExtResource( 14 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 23.5161, 0, 0.806767 )
+[node name="Tree_C" parent="." index="11" instance=ExtResource( 14 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 23.8539, 4.76837e-07, 0.415551 )
 
-[node name="Tree_C2" parent="." index="6" instance=ExtResource( 14 )]
-transform = Transform( 0.617731, 0.00295896, 0.0213674, -0.00679663, 0.494418, 0.0918557, -0.0205853, -0.0744479, 0.610875, 9.34868, 0, -11.1631 )
+[node name="Tree_C3" parent="." index="12" instance=ExtResource( 14 )]
+transform = Transform( 0.00400151, -0.102428, 0.48938, -0.0386389, 0.487868, 0.102427, -0.498489, -0.0386379, -0.00401096, 18.9913, 0.0569177, -13.6229 )
 
-[node name="Hedges" type="Node" parent="." index="7"]
+[node name="Tree_C4" parent="." index="13" instance=ExtResource( 14 )]
+transform = Transform( 0.22925, -0.0935006, 0.401629, -0.0941256, 0.435525, 0.155119, -0.401483, -0.155496, 0.192967, -13.9951, 0.0569177, -12.5852 )
 
-[node name="Hedge_S2" parent="Hedges" index="0" instance=ExtResource( 9 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 11.7805, 0, 11.6692 )
+[node name="Tree_C5" parent="." index="14" instance=ExtResource( 14 )]
+transform = Transform( -0.64412, -0.246933, 0.307787, -0.0923865, 0.667191, 0.341936, -0.383632, 0.253929, -0.599121, -16.0419, 0.0569186, 12.4851 )
 
-[node name="Hedge_S6" parent="Hedges" index="1" instance=ExtResource( 9 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -13.0364, 0, 11.6692 )
+[node name="Tree_C2" parent="." index="15" instance=ExtResource( 14 )]
+transform = Transform( 0.617731, 0.00295896, 0.0213674, -0.00679663, 0.494418, 0.0918557, -0.0205853, -0.0744479, 0.610875, 11.0639, 0, -9.49166 )
 
-[node name="Hedge_S7" parent="Hedges" index="2" instance=ExtResource( 9 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -12.1175, 0, 5.50834 )
-
-[node name="Hedge_S9" parent="Hedges" index="3" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0364, 0, -4.71936 )
-
-[node name="Hedge_S14" parent="Hedges" index="4" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0076, 0, 4.4553 )
-
-[node name="Hedge_S10" parent="Hedges" index="5" instance=ExtResource( 9 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 13.7575, 0, -8.90499 )
-
-[node name="Hedge_S11" parent="Hedges" index="6" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.774 )
-
-[node name="Hedge_S12" parent="Hedges" index="7" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4198, -1.90735e-06, -5.81053 )
-
-[node name="Hedge_S13" parent="Hedges" index="8" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.9808 )
-
-[node name="Hedge_M6" parent="Hedges" index="9" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9879, 9.53674e-07, -6.83891 )
-
-[node name="Hedge_M7" parent="Hedges" index="10" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2953, 9.53674e-07, -0.636298 )
-
-[node name="Hedge_M8" parent="Hedges" index="11" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7058, 1.90735e-06, -5.77302 )
-
-[node name="Hedge_M9" parent="Hedges" index="12" instance=ExtResource( 10 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -6.94028, 0, -10.9114 )
-
-[node name="Hedge_M10" parent="Hedges" index="13" instance=ExtResource( 10 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 9.71949, 0, -1.6404 )
-
-[node name="Hedge_L2" parent="Hedges" index="14" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8948, 9.53674e-07, 8.54749 )
-
-[node name="Hedge_XL3" parent="Hedges" index="15" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0427, 9.53674e-07, 8.64354 )
-
-[node name="Hedge_XL" parent="Hedges" index="16" instance=ExtResource( 11 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -16.1669, -9.53674e-07, -7.90324 )
-
-[node name="PlayArea" parent="." index="8"]
+[node name="PlayArea" parent="." index="16"]
 material/0 = ExtResource( 2 )
 
-[node name="CornerPiece" parent="." index="10" instance=ExtResource( 3 )]
+[node name="CornerPiece" parent="." index="18" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.99, 0, -12.49 )
 
-[node name="CornerPiece2" parent="." index="11" instance=ExtResource( 3 )]
+[node name="CornerPiece2" parent="." index="19" instance=ExtResource( 3 )]
 transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 24.99, 0, 12.49 )
 
-[node name="CornerPiece3" parent="." index="12" instance=ExtResource( 3 )]
+[node name="CornerPiece3" parent="." index="20" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24.99, 0, 12.49 )
 
-[node name="CornerPiece4" parent="." index="13" instance=ExtResource( 3 )]
+[node name="CornerPiece4" parent="." index="21" instance=ExtResource( 3 )]
 transform = Transform( 7.54979e-08, 0, 1, 0, 1, 0, -1, 0, 7.54979e-08, -24.99, 0, -12.49 )
 
-[node name="SpikeFenceA" parent="." index="14" instance=ExtResource( 4 )]
+[node name="SpikeFenceA" parent="." index="22" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 0 )
 
-[node name="SpikeFenceA2" parent="." index="15" instance=ExtResource( 4 )]
+[node name="SpikeFenceA2" parent="." index="23" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 0 )
 
-[node name="SpikeFenceB" parent="." index="16" instance=ExtResource( 5 )]
+[node name="SpikeFenceB" parent="." index="24" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, -14.5 )
 
-[node name="SpikeFenceB2" parent="." index="17" instance=ExtResource( 5 )]
+[node name="SpikeFenceB2" parent="." index="25" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 14.5 )
 
-[node name="SpikeFenceB3" parent="." index="18" instance=ExtResource( 5 )]
+[node name="SpikeFenceB3" parent="." index="26" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.5, 0, 14.5 )
 
-[node name="SpikeFenceB4" parent="." index="19" instance=ExtResource( 5 )]
+[node name="SpikeFenceB4" parent="." index="27" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.5, 0, -14.5 )
 
-[node name="Semicircle" parent="." index="20" instance=ExtResource( 7 )]
+[node name="Semicircle" parent="." index="28" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.366018, -15.3494 )
 
-[node name="Semicircle2" parent="." index="21" instance=ExtResource( 7 )]
+[node name="Semicircle2" parent="." index="29" instance=ExtResource( 7 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.366, 15.349 )
 
-[node name="CenterArena" parent="." index="22" instance=ExtResource( 6 )]
+[node name="CenterArena" parent="." index="30" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6, 0 )
 
-[node name="Camera" type="Camera" parent="." index="23"]
+[node name="Camera" type="Camera" parent="." index="31"]
 transform = Transform( 0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, -27.9834, 9, 6.17484 )
 visible = false
 projection = 1
@@ -146,3 +124,157 @@ light_color = Color( 1, 0.92549, 0.67451, 1 )
 light_energy = 6.92
 shadow_enabled = true
 omni_range = 4.0
+
+[node name="BlockTiles2" type="Spatial" parent="." index="32"]
+
+[node name="BlockTiles_Config_A" parent="BlockTiles2" index="0" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0.1, 3.5 )
+
+[node name="BlockTiles_Config_A2" parent="BlockTiles2" index="1" instance=ExtResource( 17 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11, 0.1, -10.5 )
+
+[node name="BlockTiles_Config_B" parent="BlockTiles2" index="2" instance=ExtResource( 15 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 0.1, -1.5 )
+
+[node name="BlockTiles_Config_B5" parent="BlockTiles2" index="3" instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, 0.1, 1.5 )
+
+[node name="BlockTiles_Config_B3" parent="BlockTiles2" index="4" instance=ExtResource( 15 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2, 0.1, -10.5 )
+
+[node name="BlockTiles_Config_B8" parent="BlockTiles2" index="5" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -9, 0.1, -4.5 )
+
+[node name="BlockTiles_Config_B9" parent="BlockTiles2" index="6" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -20, 0.1, -2.5 )
+
+[node name="BlockTiles_Config_B2" parent="BlockTiles2" index="7" instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 0.1, 5.5 )
+
+[node name="BlockTiles_Config_B10" parent="BlockTiles2" index="8" instance=ExtResource( 15 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -20, 0.1, 10.5 )
+
+[node name="BlockTiles_Config_C" parent="BlockTiles2" index="9" instance=ExtResource( 18 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23, 0.1, -1.5 )
+
+[node name="BlockTiles_Config_C5" parent="BlockTiles2" index="10" instance=ExtResource( 18 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12, 0.1, -10.5 )
+
+[node name="BlockTiles_Config_C7" parent="BlockTiles2" index="11" instance=ExtResource( 18 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -24, 0.1, 6.5 )
+
+[node name="BlockTiles_Config_C3" parent="BlockTiles2" index="12" instance=ExtResource( 18 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 0.1, -8.5 )
+
+[node name="BlockTiles_Config_C2" parent="BlockTiles2" index="13" instance=ExtResource( 18 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19, 0.1, -10.5 )
+
+[node name="BlockTiles_Config_D" parent="BlockTiles2" index="14" instance=ExtResource( 16 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 17, 0.1, -5.5 )
+
+[node name="BlockTiles_Config_D12" parent="BlockTiles2" index="15" instance=ExtResource( 16 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -25, 0.1, 0.5 )
+
+[node name="BlockTiles_Config_A3" parent="BlockTiles2" index="16" instance=ExtResource( 17 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0.1, 3.5 )
+
+[node name="BlockTiles_Config_A4" parent="BlockTiles2" index="17" instance=ExtResource( 17 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -20, 0.1, -9.5 )
+
+[node name="BlockTiles_Config_B6" parent="BlockTiles2" index="18" instance=ExtResource( 15 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -16, 0.1, 3.5 )
+
+[node name="BlockTiles_Config_B7" parent="BlockTiles2" index="19" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -12, 0.1, 0.499999 )
+
+[node name="BlockTiles_Config_C6" parent="BlockTiles2" index="20" instance=ExtResource( 18 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22, 0.1, 3.5 )
+
+[node name="BlockTiles_Config_D9" parent="BlockTiles2" index="21" instance=ExtResource( 16 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -16, 0.1, 7.5 )
+
+[node name="BlockTiles_Config_D7" parent="BlockTiles2" index="22" instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -7, 0.1, -13.5 )
+
+[node name="BlockTiles_Config_D11" parent="BlockTiles2" index="23" instance=ExtResource( 16 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, -6, 0.1, -8.5 )
+
+[node name="BlockTiles_Config_D8" parent="BlockTiles2" index="24" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 3.49691e-07, 0, 1, 0, -3.49691e-07, 0, 1, -15, 0.1, -11.5 )
+
+[node name="BlockTiles_Config_D6" parent="BlockTiles2" index="25" instance=ExtResource( 16 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 7, 0.1, 4.5 )
+
+[node name="BlockTiles_Config_D4" parent="BlockTiles2" index="26" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 5, 0.1, -12.5 )
+
+[node name="BlockTiles_Config_D10" parent="BlockTiles2" index="27" instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, -7, 0.1, 8.5 )
+
+[node name="BlockTiles_Config_B4" parent="BlockTiles2" index="28" instance=ExtResource( 15 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 9, 0.1, 9.5 )
+
+[node name="BlockTiles_Config_C4" parent="BlockTiles2" index="29" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0.1, 10.5 )
+
+[node name="BlockTiles_Config_D5" parent="BlockTiles2" index="30" instance=ExtResource( 16 )]
+transform = Transform( -1, 0, -2.62268e-07, 0, 1, 0, 2.62268e-07, 0, -1, 2, 0.1, 11.5 )
+
+[node name="BlockTiles_Config_D3" parent="BlockTiles2" index="31" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 15, 0.1, -11.5 )
+
+[node name="BlockTiles_Config_D2" parent="BlockTiles2" index="32" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 19, 0.1, 12.5 )
+
+[node name="Hedges2" type="Spatial" parent="." index="33"]
+
+[node name="Hedge_S2" parent="Hedges2" index="0" instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 11.7805, 0, 11.6692 )
+
+[node name="Hedge_S6" parent="Hedges2" index="1" instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -13.0364, 0, 11.6692 )
+
+[node name="Hedge_S7" parent="Hedges2" index="2" instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -12.1175, 0, 5.50834 )
+
+[node name="Hedge_S9" parent="Hedges2" index="3" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0364, 0, -4.71936 )
+
+[node name="Hedge_S14" parent="Hedges2" index="4" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0076, 0, 4.4553 )
+
+[node name="Hedge_S10" parent="Hedges2" index="5" instance=ExtResource( 9 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 13.7575, 0, -8.90499 )
+
+[node name="Hedge_S11" parent="Hedges2" index="6" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.774 )
+
+[node name="Hedge_S12" parent="Hedges2" index="7" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4198, -1.90735e-06, -5.81053 )
+
+[node name="Hedge_S13" parent="Hedges2" index="8" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.9808 )
+
+[node name="Hedge_M6" parent="Hedges2" index="9" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9879, 9.53674e-07, -6.83891 )
+
+[node name="Hedge_M7" parent="Hedges2" index="10" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2953, 9.53674e-07, -0.636298 )
+
+[node name="Hedge_M8" parent="Hedges2" index="11" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7058, 1.90735e-06, -5.77302 )
+
+[node name="Hedge_M9" parent="Hedges2" index="12" instance=ExtResource( 10 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -6.94028, 0, -10.9114 )
+
+[node name="Hedge_M10" parent="Hedges2" index="13" instance=ExtResource( 10 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 9.71949, 0, -1.6404 )
+
+[node name="Hedge_L2" parent="Hedges2" index="14" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8948, 9.53674e-07, 8.54749 )
+
+[node name="Hedge_XL3" parent="Hedges2" index="15" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0427, 9.53674e-07, 8.64354 )
+
+[node name="Hedge_XL" parent="Hedges2" index="16" instance=ExtResource( 11 )]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -16.1669, -9.53674e-07, -7.90324 )

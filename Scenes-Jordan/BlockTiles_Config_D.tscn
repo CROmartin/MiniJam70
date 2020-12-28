@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes-Jordan/BlockTile_A.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes-Jordan/BlockTile_E.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes-Jordan/BlockTile_B.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes-Jordan/BlockTile_D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes-Jordan/BlockTile_C.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes-Jordan/BlockTile_F.tscn" type="PackedScene" id=6]
+
+[node name="BlockTiles_Config_D" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
+
+[node name="BlockTile_A3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -2, 0, 0 )
+
+[node name="BlockTile_D" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -1 )
+
+[node name="BlockTile_E2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3, 0, 0 )
+
+[node name="BlockTile_F2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.999994, -0.00215991, -0.00282222, 0.00216373, 0.999997, 0.00135581, 0.00281929, -0.00136189, 0.999995, 2, 0, -1 )
+
+[node name="BlockTile_B2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )
+
+[node name="BlockTile_C2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2, 0, -2 )

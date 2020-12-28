@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Materials/BlockTiles.tres" type="Material" id=1]
+[ext_resource path="res://Assets/Meshes/BlockTile_F.dae" type="PackedScene" id=2]
+
+[node name="BlockTile_F" instance=ExtResource( 2 )]
+
+[node name="BlockTile_F" parent="." index="0"]
+material/0 = ExtResource( 1 )
+
+[node name="shape0" parent="BlockTile_F/BlockTile_F" index="0"]
+disabled = true
