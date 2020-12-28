@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Materials/Trees.tres" type="Material" id=1]
 [ext_resource path="res://Assets/Materials/TreeLeaves.tres" type="Material" id=2]
 [ext_resource path="res://Assets/Meshes/Tree_B.dae" type="PackedScene" id=3]
+[ext_resource path="res://Scenes-Jordan/Tree_B.gd" type="Script" id=4]
 
 [node name="Tree_B" instance=ExtResource( 3 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+script = ExtResource( 4 )
 
 [node name="Tree_B" parent="." index="0"]
 material/0 = ExtResource( 1 )

@@ -1,34 +1,35 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes-Martin/Cleasing light semi.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Textures/HealingParticle.png" type="Texture" id=2]
 
-[sub_resource type="Gradient" id=4]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.502415, 1 )
-colors = PoolColorArray( 1, 0.552941, 0.0666667, 1, 1, 0.85098, 0, 1, 1, 0.592157, 0, 1 )
+colors = PoolColorArray( 1, 0.552941, 0.0666667, 0.647059, 1, 0.85098, 0, 1, 1, 0.592157, 0, 0.47451 )
 
-[sub_resource type="GradientTexture" id=5]
-gradient = SubResource( 4 )
+[sub_resource type="GradientTexture" id=8]
+gradient = SubResource( 1 )
 
-[sub_resource type="ParticlesMaterial" id=6]
-emission_shape = 2
-emission_box_extents = Vector3( 3, 1, 5 )
+[sub_resource type="ParticlesMaterial" id=9]
+emission_shape = 1
+emission_sphere_radius = 0.3
 direction = Vector3( 0, 5, 0 )
-spread = 80.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 5.0
+spread = 5.0
+gravity = Vector3( 0, 2, 0 )
+initial_velocity = 6.0
 initial_velocity_random = 1.0
-angular_velocity = 100.0
-radial_accel = -5.0
-tangential_accel = 1.0
-angle = 5.0
-angle_random = 1.0
-scale = 5.0
+angular_velocity = 2.0
+linear_accel = 4.0
+radial_accel = 1.0
+tangential_accel = 5.0
+damping = 9.0
+scale = 0.5
 scale_random = 1.0
-color_ramp = SubResource( 5 )
-hue_variation = 1.0
-hue_variation_random = 1.0
+color_ramp = SubResource( 8 )
+hue_variation = 0.17
+hue_variation_random = 0.5
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=4]
 flags_unshaded = true
 vertex_color_use_as_albedo = true
 vertex_color_is_srgb = true
@@ -37,34 +38,38 @@ params_billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
-albedo_color = Color( 0.894118, 0.917647, 0.121569, 1 )
+albedo_color = Color( 0.984314, 1, 0.490196, 0.572549 )
+albedo_texture = ExtResource( 2 )
 
-[sub_resource type="QuadMesh" id=3]
-material = SubResource( 2 )
-size = Vector2( 0.01, 0.01 )
+[sub_resource type="QuadMesh" id=5]
+material = SubResource( 4 )
+size = Vector2( 0.1, 0.1 )
 
-[sub_resource type="ParticlesMaterial" id=7]
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
-direction = Vector3( 0, 5, 0 )
-spread = 80.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 5.0
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 1
+emission_sphere_radius = 0.5
+direction = Vector3( 0, 6, 0 )
+spread = 2.5
+gravity = Vector3( 0, -4, 0 )
+initial_velocity = 7.0
 initial_velocity_random = 1.0
-angular_velocity = 100.0
-radial_accel = -80.0
+angular_velocity = 125.0
+radial_accel = -5.0
 radial_accel_random = 1.0
-tangential_accel = 7.0
-angle = 5.0
+tangential_accel = 4.2
+angle = 1.0
 angle_random = 1.0
-scale = 4.0
-scale_random = 1.0
-color_ramp = SubResource( 5 )
-hue_variation = 1.0
+scale = 50.0
+scale_random = 0.85
+color_ramp = SubResource( 2 )
+hue_variation = 0.25
 hue_variation_random = 1.0
 
-[sub_resource type="QuadMesh" id=8]
-material = SubResource( 2 )
+[sub_resource type="QuadMesh" id=7]
+material = SubResource( 4 )
 size = Vector2( 0.01, 0.01 )
 
 [node name="Cleasing light semi" type="Spatial"]
@@ -73,33 +78,36 @@ script = ExtResource( 1 )
 [node name="OmniLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 4.84484, 0 )
 light_color = Color( 0.905882, 0.909804, 0.247059, 1 )
-light_energy = 30.0
+light_energy = 15.0
 spot_range = 10.0
 
 [node name="OmniLight3" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -1.24727, 4.83569, -2.87613 )
 light_color = Color( 0.905882, 0.909804, 0.247059, 1 )
-light_energy = 30.0
+light_energy = 15.0
 spot_range = 10.0
 
 [node name="OmniLight2" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -1.2738, 4.84484, 2.49866 )
 light_color = Color( 0.905882, 0.909804, 0.247059, 1 )
-light_energy = 30.0
+light_energy = 15.0
 spot_range = 10.0
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.788032, 1.64629, -0.232159 )
-amount = 80
-lifetime = 2.0
+amount = 175
+explosiveness = 0.1
+randomness = 0.5
 visibility_aabb = AABB( -4, -1.15806, -4, 8, 2.31611, 8 )
-process_material = SubResource( 6 )
-draw_pass_1 = SubResource( 3 )
+process_material = SubResource( 9 )
+draw_pass_1 = SubResource( 5 )
 
 [node name="Particles2" type="Particles" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.788032, 1.64629, -0.232159 )
-amount = 200
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.788032, 2.67859, -0.232159 )
+amount = 40
 lifetime = 2.0
-visibility_aabb = AABB( -4, -1.15806, -4, 8, 2.31611, 8 )
-process_material = SubResource( 7 )
-draw_pass_1 = SubResource( 8 )
+speed_scale = 0.5
+explosiveness = 0.15
+visibility_aabb = AABB( -4, -1.65507, -4, 8, 3.31014, 8 )
+process_material = SubResource( 6 )
+draw_pass_1 = SubResource( 7 )

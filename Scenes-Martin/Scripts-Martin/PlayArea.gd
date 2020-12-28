@@ -24,7 +24,7 @@ func _process(delta):
 		max_e = 1
 		min_e = 0.5
 	else:
-		max_e = 0.3
+		max_e = 0.2
 		min_e = 0.1
 		
 	if player.pick >= 6:

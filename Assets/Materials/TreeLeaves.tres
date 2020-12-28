@@ -25,3 +25,6 @@ emission_texture = ExtResource( 4 )
 normal_enabled = true
 normal_scale = -2.5
 normal_texture = ExtResource( 2 )
+distance_fade_mode = 2
+distance_fade_min_distance = 8.5
+distance_fade_max_distance = 11.5

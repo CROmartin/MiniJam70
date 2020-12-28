@@ -35,7 +35,7 @@ _data = {
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 12 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 18.5255, 0.587435, -0.124807 )
+transform = Transform( -0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 18.5255, 0.70643, -0.124807 )
 
 [node name="PlayArea" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0 )

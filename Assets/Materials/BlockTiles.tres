@@ -5,11 +5,12 @@
 [ext_resource path="res://Assets/Textures/BlockTiles_Emission.png" type="Texture" id=3]
 
 [resource]
+albedo_color = Color( 0.694118, 0.694118, 0.694118, 1 )
 albedo_texture = ExtResource( 1 )
-metallic = 0.82
-metallic_specular = 0.26
+metallic = 0.51
+metallic_specular = 0.11
 metallic_texture_channel = 4
-roughness = 0.9
+roughness = 0.96
 roughness_texture = ExtResource( 2 )
 roughness_texture_channel = 4
 emission_enabled = true

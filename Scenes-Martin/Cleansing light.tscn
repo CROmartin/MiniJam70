@@ -1,34 +1,35 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes-Martin/Scripts-Martin/Cleansing light.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Textures/HealingParticle.png" type="Texture" id=2]
 
-[sub_resource type="Gradient" id=4]
+[sub_resource type="Gradient" id=15]
 offsets = PoolRealArray( 0, 0.502415, 1 )
-colors = PoolColorArray( 1, 0.552941, 0.0666667, 1, 1, 0.85098, 0, 1, 1, 0.592157, 0, 1 )
+colors = PoolColorArray( 1, 0.552941, 0.0666667, 0.647059, 1, 0.85098, 0, 1, 1, 0.592157, 0, 0.47451 )
 
-[sub_resource type="GradientTexture" id=5]
-gradient = SubResource( 4 )
+[sub_resource type="GradientTexture" id=16]
+gradient = SubResource( 15 )
 
-[sub_resource type="ParticlesMaterial" id=1]
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
+[sub_resource type="ParticlesMaterial" id=17]
+emission_shape = 1
+emission_sphere_radius = 0.3
 direction = Vector3( 0, 5, 0 )
-spread = 80.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 5.0
+spread = 5.0
+gravity = Vector3( 0, 2, 0 )
+initial_velocity = 6.0
 initial_velocity_random = 1.0
-angular_velocity = 100.0
-radial_accel = -5.0
-tangential_accel = 2.0
-angle = 5.0
-angle_random = 1.0
-scale = 5.0
+angular_velocity = 2.0
+linear_accel = 4.0
+radial_accel = 1.0
+tangential_accel = 5.0
+damping = 9.0
+scale = 0.5
 scale_random = 1.0
-color_ramp = SubResource( 5 )
-hue_variation = 1.0
-hue_variation_random = 1.0
+color_ramp = SubResource( 16 )
+hue_variation = 0.17
+hue_variation_random = 0.5
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=18]
 flags_unshaded = true
 vertex_color_use_as_albedo = true
 vertex_color_is_srgb = true
@@ -37,13 +38,48 @@ params_billboard_mode = 3
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
-albedo_color = Color( 0.894118, 0.917647, 0.121569, 1 )
+albedo_color = Color( 0.984314, 1, 0.490196, 0.572549 )
+albedo_texture = ExtResource( 2 )
 
-[sub_resource type="QuadMesh" id=3]
-material = SubResource( 2 )
+[sub_resource type="QuadMesh" id=19]
+material = SubResource( 18 )
+size = Vector2( 0.1, 0.1 )
+
+[sub_resource type="GradientTexture" id=20]
+gradient = SubResource( 15 )
+
+[sub_resource type="ParticlesMaterial" id=21]
+emission_shape = 1
+emission_sphere_radius = 0.5
+direction = Vector3( 0, 6, 0 )
+spread = 2.5
+gravity = Vector3( 0, -4, 0 )
+initial_velocity = 7.0
+initial_velocity_random = 1.0
+angular_velocity = 125.0
+radial_accel = -5.0
+radial_accel_random = 1.0
+tangential_accel = 4.2
+angle = 1.0
+angle_random = 1.0
+scale = 50.0
+scale_random = 0.85
+color_ramp = SubResource( 20 )
+hue_variation = 0.25
+hue_variation_random = 1.0
+
+[sub_resource type="QuadMesh" id=22]
+material = SubResource( 18 )
 size = Vector2( 0.01, 0.01 )
 
-[sub_resource type="ParticlesMaterial" id=9]
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0, 0.502415, 1 )
+colors = PoolColorArray( 1, 0.552941, 0.0666667, 1, 1, 0.85098, 0, 1, 1, 0.592157, 0, 1 )
+
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=12]
 emission_shape = 2
 emission_box_extents = Vector3( 0.2, 0.2, 0.2 )
 direction = Vector3( 0, 5, 0 )
@@ -59,12 +95,23 @@ angle = 5.0
 angle_random = 1.0
 scale = 4.0
 scale_random = 1.0
-color_ramp = SubResource( 5 )
+color_ramp = SubResource( 11 )
 hue_variation = 1.0
 hue_variation_random = 1.0
 
-[sub_resource type="QuadMesh" id=8]
-material = SubResource( 2 )
+[sub_resource type="SpatialMaterial" id=13]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_color = Color( 0.894118, 0.917647, 0.121569, 1 )
+
+[sub_resource type="QuadMesh" id=14]
+material = SubResource( 13 )
 size = Vector2( 0.01, 0.01 )
 
 [node name="Cleansing light" type="Spatial"]
@@ -85,18 +132,33 @@ transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 4.84
 light_color = Color( 0.905882, 0.909804, 0.247059, 1 )
 light_energy = 30.0
 
-[node name="Particles" type="Particles" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.788032, 1.64629, 1.19983 )
-amount = 80
-lifetime = 3.0
-visibility_aabb = AABB( -4, -1.15806, -4, 8, 2.31611, 8 )
-process_material = SubResource( 1 )
-draw_pass_1 = SubResource( 3 )
-
 [node name="Particles2" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.788032, 1.64629, -0.232159 )
+amount = 175
+explosiveness = 0.1
+randomness = 0.5
+visibility_aabb = AABB( -4, -1.15806, -4, 8, 2.31611, 8 )
+process_material = SubResource( 17 )
+draw_pass_1 = SubResource( 19 )
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.788032, 2.67859, -0.232159 )
+amount = 40
+lifetime = 2.0
+speed_scale = 0.5
+explosiveness = 0.15
+visibility_aabb = AABB( -4, -1.65507, -4, 8, 3.31014, 8 )
+process_material = SubResource( 21 )
+draw_pass_1 = SubResource( 22 )
+
+[node name="Particles2-old" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.678309, 1.64629, 1.09864 )
+visible = false
 amount = 200
 lifetime = 2.0
 visibility_aabb = AABB( -4, -1.15806, -4, 8, 2.31611, 8 )
-process_material = SubResource( 9 )
-draw_pass_1 = SubResource( 8 )
+process_material = SubResource( 12 )
+draw_pass_1 = SubResource( 14 )
+
+[node name="Particles-old" type="Particles" parent="."]
+visible = false

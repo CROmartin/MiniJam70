@@ -9,10 +9,10 @@
 [node name="Semicircle" instance=ExtResource( 1 )]
 script = ExtResource( 4 )
 
-[node name="Semicircle" parent="." index="0"]
-material/0 = ExtResource( 2 )
+[node name="Spikes_Semicircle" parent="." index="0" instance=ExtResource( 5 )]
 
-[node name="Spikes_Semicircle" parent="." index="2" instance=ExtResource( 5 )]
+[node name="Semicircle" parent="." index="1"]
+material/0 = ExtResource( 2 )
 
 [node name="Pillar" parent="." index="3" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.95672, 0.334314, 0.895368 )

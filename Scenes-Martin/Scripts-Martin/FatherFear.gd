@@ -13,8 +13,8 @@ func _ready():
 
 func _process(delta):
 	var distance = translation.distance_to(player.translation);
-	if distance < 5.4:
-		$FATHER_FEAR.get_surface_material(0).emission_energy += 0.005;
+	if distance < 5.4 && player.dead == false:
+		$FATHER_FEAR.get_surface_material(0).emission_energy += 0.009;
 		
 		var ee = $FATHER_FEAR.get_surface_material(0).emission_energy;
 		if ee > 0 && ee < 5:

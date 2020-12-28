@@ -1,7 +1,8 @@
 extends Spatial
 
-var game = preload("res://Scenes-Martin/main.tscn");
+
 var menu = preload("res://Scenes-Martin/menu.tscn");
+var game = preload("res://Scenes-Martin/main.tscn");
 var play = 0;
 var quit = 0;
 var in_menu = 1;
