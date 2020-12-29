@@ -24,7 +24,7 @@ func _ready():
 func _process(delta):
 	
 	var distance = translation.distance_to(player.translation);
-	if distance > 9:
+	if distance > 13:
 		$OmniLight.visible = false;
 		$OmniLight2.visible = false;
 		$OmniLight3.visible = false;

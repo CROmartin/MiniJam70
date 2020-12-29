@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var move_speed = 2;
+var move_speed = 1.5;
 var gravity = 9.8;
 var tilt = 1;
 var tilt_range_max = 60;
@@ -30,7 +30,12 @@ func _ready():
 
 func _physics_process(delta):
 	
+	$PlayerNew/Teapot.get_surface_material(0).emission_energy = 0.1 + (0.22*pick);
+	if pick == 6 && has_node("PlayerNew/PlayerSmoke"):
+		get_node("PlayerNew/PlayerSmoke").queue_free();
 
+	if translation.y < -1:
+		dead = true;
 	
 	if !dead:
 		posToMove.x = 0;

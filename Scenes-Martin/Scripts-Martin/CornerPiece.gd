@@ -67,7 +67,9 @@ func _process(delta):
 		$Pillar/PillarLight.light_energy = pl1_l + random_target*t;
 		$Pillar2/PillarLight.light_energy = pl2_l+ random_target*t;
 		$Pillar3/PillarLight.light_energy = pl3_l + random_target*t;
+		$LightCorner_New/LightCorner.get_surface_material(0).emission_energy = $Pillar3/Pillar.get_surface_material(0).emission_energy;
 	pass
+	
 
 func smooth_trans(A,B):
 	return A + (B - A) * t;

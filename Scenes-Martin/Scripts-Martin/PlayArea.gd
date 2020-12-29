@@ -21,11 +21,11 @@ func _ready():
 func _process(delta):
 	var distance = translation.distance_to(player.translation);
 	if player.dead == true:
-		max_e = 1
-		min_e = 0.5
+		max_e = 1.2
+		min_e = 0.7
 	else:
-		max_e = 0.2
-		min_e = 0.1
+		max_e = 0.7
+		min_e = 0.2
 		
 	if player.pick >= 6:
 		if c_destroyed == false:

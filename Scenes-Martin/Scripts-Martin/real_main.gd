@@ -19,7 +19,7 @@ func _process(delta):
 		if Input.is_action_pressed("ui_cancel"):
 			get_tree().quit()
 		if play == 1:
-			$menu/Node2D/Play/circle.rotation_degrees += 3;
+			$menu/Node2D/Play/circle.rotation_degrees += 6;
 			if Input.is_action_pressed("mouse_left"):
 				var g = game.instance();
 				get_node(".").add_child(g);
@@ -30,7 +30,7 @@ func _process(delta):
 				pass
 				
 		if quit == 1:
-			$menu/Node2D/Quit/circle.rotation_degrees += 3;
+			$menu/Node2D/Quit/circle.rotation_degrees += 6;
 			if Input.is_action_pressed("mouse_left"):
 				get_tree().quit()
 				pass

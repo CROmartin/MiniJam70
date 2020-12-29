@@ -30,12 +30,13 @@ func _process(delta):
 			translation.y -= 0.03;
 			music.play_sound("sfx_boss-death");
 			music.change_song("sc_pc-victory");
+			music.change_song("sc_pc-victory");
 			if translation.y <= -1:
 				queue_free();
 		if timer > 0:
 			timer -=1;
 		else:
-			timer = 160;
+			timer = 145;
 			music.play_sound("sfx_boss-attack");
 			create_ball($Position3D.translation);
 			create_ball($Position3D2.translation);
